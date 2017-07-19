@@ -184,10 +184,10 @@ $(function () {
     });
 
     $('.more_info').click(function () {
-        del_slide();
-        $('.carousel').carousel(13);
-        add_slide();
-        open_layout();
+        //del_slide();
+        //$('.carousel').carousel(13);
+        //add_slide();
+        //open_layout();
     });
 
     //給多國於係鋪路

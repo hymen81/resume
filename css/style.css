@@ -71,11 +71,15 @@ i { font-size: 16px; }
 .btn_green { background-color: #111; color: #fff; }
 .btn_green:active { background-color: #111; color: #fff; }
 .btn_more { background-color: #fff; color: #999; }
-.btn_more:hover { background-color: #f3f3f3; }
-.btn_more:active { background-color: #ddd; color: #666; }
+.btn_more:hover{ background-color: #f3f3f3; }
+.btn_more:active{ background-color: #ddd; color: #666; }
 .btn_group{background-color: #222; color: #eee; display: block;}
+.more_info{ background-color: #fff; color: #999; }
+.more_info:hover{ background-color: #f3f3f3; }
+.more_info:active{ background-color: #ddd; color: #666; }
+.more_info{ width: 80px; height: 30px; line-height: 30px; border: 1px #ccc solid; display: block; margin-left: 26px; text-align: center; }
 
-.info_content  .btn_more { width: 80px; height: 30px; line-height: 30px; border: 1px #ccc solid; display: block; margin-left: 26px; text-align: center; }
+.info_content  .btn_more  .more_info{ width: 80px; height: 30px; line-height: 30px; border: 1px #ccc solid; display: block; margin-left: 26px; text-align: center; }
 
 .button_print { padding: 5px 7px; font-size: 12px; display: block; position: fixed; top: 10px; right: 10px; z-index: 99; }
 
