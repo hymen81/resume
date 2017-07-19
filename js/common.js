@@ -198,18 +198,24 @@ $(function () {
         $group_name = $(this);
         $group = $('.' + $group_name.attr("id"));
 
+        //收合
         if ($group.is(":visible")) {
             $group.hide(100);
             $group_name.text(btn_group_name_expand_ch);
-            $group_name.parent().children('h3').children('i').attr('data-icon',"L");
+            $group_name.parent().children('h4').children('i').attr('data-icon', "L");
+            $group_name.css('display', '');
+            $group.parent('li').children('.btn_detail').hide();
             
-            //$group_name.removeClass('display');
-        } else {          
+        }
+        //展開 
+        else {
             $group.show("fast");
             $group_name.text(btn_group_name_contract_ch);
-            $group_name.parent().children('h3').children('i').attr('data-icon',"K");
-            $('.info_content ul li .btn_go').css('display','block');
-          //  $group_name.css('display','block');
+            $group_name.parent().children('h4').children('i').attr('data-icon', "K");
+            $group_name.css('display', 'block');
+            $group.parent('li').children('.btn_detail').css('display','block').show();
+            //alert($group.parent('li').children('.btn_detail').length);
+            //  $group_name.css('display','block');
         }
     });
 
@@ -248,6 +254,13 @@ $(function () {
     //close sound help
     $('.close_help').click(function () {
         soundhelpClose();
+    });
+
+    $(window).resize(function () {
+        if($(this).width()<800)
+        {
+            //$('.info_content ul li .btn_go').hide();
+        }
     });
 
 });

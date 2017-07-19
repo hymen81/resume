@@ -1,6 +1,9 @@
 @charset "utf-8";
 
 /* commmon */
+
+@media only screen and (min-width: 800px){	
+
 	.main { width: 1200px; }
 	.avatar,.info_left { float: left; margin: 0; }
 	.base,.info_right { float: right; }
@@ -29,6 +32,7 @@
 	.sound_help { width: 56%; padding: 2%; margin-left: -30%; height: 300px; }
 
 
+}
 
 
 /* 799 */
@@ -50,16 +54,19 @@
 	.tip_right { width: 80%; padding: 10% 10% 30%; height: auto; position: relative; top: 0; margin: 0; background-color: rgba(12,12,12,0.8); }
 	.info_content.over .desc { height: auto; margin-bottom: 20px; }
 	.info_content.over .s5.curr, .info_content.over .s4.curr, .info_content.over .s3.curr, .info_content.over .s2.curr, .info_content.over .s1.curr { padding-top: 0; height: auto; }
-	.info_content ul li .btn_go { /*display: block;*/ position: relative; right: 0; top: 0; width: 80%; margin: -12px 0 30px 26px; }
+	.info_content ul li .btn_go { /*display: block;*/ position: relative; right: 0; top: 0; width: 80%; margin: -12px 0 30px 26px;    text-align: center; }
 	.descprition { width: 94%; }
 	.descprition p img { max-width: 100%; }
 	.sound_help { width: 96%; padding: 2%; margin-left: -50%; height: 350px; }
-
+	.info_content ul li:hover .btn_go { display: block; }
 
 	/* display none */
 	.button_print { display: none; }
-
+	/*(詳細按鈕)隱藏*/
+	.btn_detail	{display: none;}
+	
 }
+
 
 
 /* 800-1023 nav */
