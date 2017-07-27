@@ -176,9 +176,16 @@ $(function () {
         open_layout();
     });
 
-    $('.btn_more').click(function () {
+    $('.pizza').click(function () {
         del_slide();
         $('.carousel').carousel(12);
+        add_slide();
+        open_layout();
+    });
+
+    $('.btn_more').click(function () {
+        del_slide();
+        $('.carousel').carousel(13);
         add_slide();
         open_layout();
     });
