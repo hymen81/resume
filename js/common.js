@@ -96,105 +96,23 @@ $(function () {
         $('.carousel').addClass('slide');
     }
 
-    $('.fish').click(function () {
-        del_slide();
-        $('.carousel').carousel(0);
-        add_slide();
-        open_layout();
-    });
+    function work_detail(work_name,index)
+    {
+        $(work_name).click(function () {
+            del_slide();
+            $('.carousel').carousel(index);
+            add_slide();
+            open_layout();
+        });
+    }
 
-    //product carousel (以0为开始)
-    $('.booking').click(function () {
-        del_slide();
-        $('.carousel').carousel(1);
-        add_slide();
-        open_layout();
-    });
+    var work_names = ['.fish', '.booking', '.product_2', '.product_3', '.product_4', '.product_5', '.rail', '.card'
+        , '.bios_game', '.cat', '.win7', '.swear', '.pizza', '.speech', '.more_works'];
 
-    $('.product_2').click(function () {
-        del_slide();
-        $('.carousel').carousel(2);
-        add_slide();
-        open_layout();
-    });
-
-    $('.product_3').click(function () {
-        del_slide();
-        $('.carousel').carousel(3);
-        add_slide();
-        open_layout();
-    });
-
-    $('.product_4').click(function () {
-        del_slide();
-        $('.carousel').carousel(4);
-        add_slide();
-        open_layout();
-    });
-
-    $('.product_5').click(function () {
-        del_slide();
-        $('.carousel').carousel(5);
-        add_slide();
-        open_layout();
-    });
-
-    $('.rail').click(function () {
-        del_slide();
-        $('.carousel').carousel(6);
-        add_slide();
-        open_layout();
-    });
-    $('.card').click(function () {
-        del_slide();
-        $('.carousel').carousel(7);
-        add_slide();
-        open_layout();
-    });
-    $('.bios_game').click(function () {
-        del_slide();
-        $('.carousel').carousel(8);
-        add_slide();
-        open_layout();
-    });
-    $('.cat').click(function () {
-        del_slide();
-        $('.carousel').carousel(9);
-        add_slide();
-        open_layout();
-    });
-    $('.win7').click(function () {
-        del_slide();
-        $('.carousel').carousel(10);
-        add_slide();
-        open_layout();
-    });
-    $('.swear').click(function () {
-        del_slide();
-        $('.carousel').carousel(11);
-        add_slide();
-        open_layout();
-    });
-
-    $('.pizza').click(function () {
-        del_slide();
-        $('.carousel').carousel(12);
-        add_slide();
-        open_layout();
-    });
-
-    $('.more_works').click(function () {
-        del_slide();
-        $('.carousel').carousel(13);
-        add_slide();
-        open_layout();
-    });
+    for (var index = 0; index < work_names.length; index++)
+        work_detail(work_names[index], index);
 
     $('.more_info').click(function () {
-        //del_slide();
-        //$('.carousel').carousel(13);
-        //add_slide();
-        //open_layout();
     });
 
     //給多國於係鋪路
