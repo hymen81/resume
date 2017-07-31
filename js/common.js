@@ -183,7 +183,7 @@ $(function () {
         open_layout();
     });
 
-    $('.btn_more').click(function () {
+    $('.more_works').click(function () {
         del_slide();
         $('.carousel').carousel(13);
         add_slide();
