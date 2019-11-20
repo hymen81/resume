@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta property="og:title" content="Resume"/>
     <meta property="og:image" content="http://i.imgur.com/w1QsvFg.jpg"/>
-    <meta property="og:description" content="Billy Huang的履歷"/>
+    <meta property="og:description" content="Billy Huang's Resume"/>
     <link href="css/pace-theme-flash.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/font.css" rel="stylesheet" type="text/css">
-    <title>黃臣逸的履歷</title>
+    <title>Billy Huang's Resume</title>
 </head>
 
 <body>
@@ -24,18 +24,20 @@
                     <b class="doing r5">Man</b>
                 </div>
                 <div class="base">
-                    <h2>黃臣逸(Billy)</h2>
-                    <p>軟韌體工程師</p>
+                    <h2 v-html="$t('my_name')"></h2>
+                    <p v-html="$t('job_name')"></p>			
                     <span>
-                            <p><i aria-hidden="true" data-icon="&#xe00d;" href =""></i>GitHub<a href="https://github.com/hymen81" target="_blank" class="btn_green r5">點我</a></p>
-                            <p><i aria-hidden="true" data-icon="&#xe01d;"></i>新北市板橋區</p>
-                            <p><a href="javascript:;" class="tel_me"><i aria-hidden="true" data-icon="&#xe00b;"></i>+886910086521</a></p>
-                        </span>
+						<a href="javascript:;" class="btn_green btn_go r5" v-on:click="changeToChinese">中文版</a>
+						<a href="javascript:;" class="btn_green btn_go r5" v-on:click="changeToEnglish">English</a>
+						<p><i aria-hidden="true" data-icon="&#xe00d;" href =""></i>GitHub<a href="https://github.com/hymen81" target="_blank" class="btn_green r5">點我</a></p>
+						<p><i aria-hidden="true" data-icon="&#xe01d;"></i>新北市板橋區</p>
+						<p><a href="javascript:;" class="tel_me"><i aria-hidden="true" data-icon="&#xe00b;"></i>+886910086521</a></p>
+					</span>
                 </div>
             </div>
             <div class="information clearfix">
                 <div class="info_area  info_content">
-                    <h5>一些經歷</h5>               
+                    <h5 v-html="$t('go_through')"></h5>               
                     <p>Aug 2014 : 從學校碩士班畢業</p>                  
                     <p>Nov 2014 : 進入Acer當研發替代役 - System Software Engineer</p>
                     <p>Dec 2014 : 開發Intel RealSense 深度攝影機相關應用軟體</p>
@@ -64,7 +66,7 @@
             <div class="information clearfix">
                 <!--left-->
                 <div class="info_area info_left info_content">
-                    <h5>作品集</h5>
+                    <h5 v-html="$t('portfolio')"></h5>
                     <ul>
 
                         <!-- Web相關的群組 start-->
@@ -870,26 +872,19 @@
     </div>-->
 
     <div class="bye"><span>再見</span></div>
-
     <!--Jquery 2.1-->
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-
-   
     <script type="text/javascript" src="js/jQuery.print.js"></script>
-
-   
-    <script type="text/javascript" src="js/jquery.transit.min.js"></script>
-
-    <!--jquery 旋轉是放映-->
+    <script type="text/javascript" src="js/jquery.transit.min.js"></script>    
     <script type="text/javascript" src="js/carousel.min.js"></script>
-
     <!--jquery annyang sound control-->
     <script type="text/javascript" src="js/annyang.min.js"></script>
-
     <!--jquery loadding-->
     <script type="text/javascript" src="js/pace.min.js"></script>
-
-    <!--effect-->
+    
+	<script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
+	<script type="text/javascript" src="js/i18n.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
 
 </body>

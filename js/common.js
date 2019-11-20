@@ -1,7 +1,4 @@
-/*执行事件*/
 $(function () {
-
-
 
     //animate avatar info
     $('.avatar_pic,.tel_me').click(function () {
@@ -115,7 +112,7 @@ $(function () {
     $('.more_info').click(function () {
     });
 
-    //給多國於係鋪路
+  
     var btn_group_name_expand_ch = "點我展開";
     var btn_group_name_contract_ch = "點我收合";
     //群組縮放
@@ -211,4 +208,27 @@ function byebye() {
         $('body').addClass('of');
     });
 }
+
+
+const i18n = new VueI18n({
+  locale: 'en', 
+  messages
+})
+
+new Vue({
+  i18n: i18n,
+  computed: {
+  },
+  data: {  
+  },
+  methods: {
+               changeToChinese: function (e) {i18n.locale = 'cn'},
+			   changeToEnglish: function (e) {i18n.locale = 'en'}
+  }
+}).$mount('.main')
+
+
+
+
+
 
