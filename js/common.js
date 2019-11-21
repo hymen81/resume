@@ -103,7 +103,7 @@ $(function () {
         });
     }
 
-    var work_names = ['.fish', '.booking', '.product_2', '.product_3', '.product_4', '.product_5', '.rail', '.card'
+    var work_names = ['.mycar8891','.kinesis','.draw','.fish', '.booking', '.product_2', '.product_3', '.product_4', '.product_5', '.rail', '.card'
         , '.bios_game', '.cat', '.win7', '.swear', '.pizza', '.speech', '.more_works'];
 
     for (var index = 0; index < work_names.length; index++)
@@ -115,6 +115,8 @@ $(function () {
   
     var btn_group_name_expand_ch = "點我展開";
     var btn_group_name_contract_ch = "點我收合";
+	var btn_group_name_expand_en = "Expand";
+    var btn_group_name_contract_en = "Collapse";
     //群組縮放
     $('.btn_group').click(function () {
         $group_name = $(this);
@@ -123,7 +125,7 @@ $(function () {
         //收合
         if ($group.is(":visible")) {
             $group.hide(100);
-            $group_name.text(btn_group_name_expand_ch);
+            $group_name.text(i18n.locale === 'en' ? btn_group_name_expand_en:btn_group_name_expand_ch);
             $group_name.parent().children('h4').children('i').attr('data-icon', "L");
             $group_name.css('display', '');
             $group.parent('li').children('.btn_detail').hide();
@@ -132,7 +134,7 @@ $(function () {
         //展開 
         else {
             $group.show("fast");
-            $group_name.text(btn_group_name_contract_ch);
+            $group_name.text(i18n.locale === 'en' ? btn_group_name_contract_en:btn_group_name_contract_ch);
             $group_name.parent().children('h4').children('i').attr('data-icon', "K");
             $group_name.css('display', 'block');
             $group.parent('li').children('.btn_detail').css('display','block').show();
@@ -226,6 +228,18 @@ new Vue({
 			   changeToEnglish: function (e) {i18n.locale = 'en'}
   }
 }).$mount('.main')
+
+new Vue({
+  i18n: i18n,
+  computed: {
+  },
+  data: {  
+  },
+  methods: {
+               changeToChinese: function (e) {i18n.locale = 'cn'},
+			   changeToEnglish: function (e) {i18n.locale = 'en'}
+  }
+}).$mount('.tip_avatar')
 
 
 

@@ -27,40 +27,58 @@
                     <h2 v-html="$t('my_name')"></h2>
                     <p v-html="$t('job_name')"></p>			
                     <span>
-						<a href="javascript:;" class="btn_green btn_go r5" v-on:click="changeToChinese">中文版</a>
-						<a href="javascript:;" class="btn_green btn_go r5" v-on:click="changeToEnglish">English</a>
-						<p><i aria-hidden="true" data-icon="&#xe00d;" href =""></i>GitHub<a href="https://github.com/hymen81" target="_blank" class="btn_green r5">點我</a></p>
-						<p><i aria-hidden="true" data-icon="&#xe01d;"></i>新北市板橋區</p>
-						<p><a href="javascript:;" class="tel_me"><i aria-hidden="true" data-icon="&#xe00b;"></i>+886910086521</a></p>
+						<p><a href="javascript:;" class="r5" v-on:click="changeToChinese">中文版</a>
+						<a href="javascript:;" class="r5" v-on:click="changeToEnglish">English</a></p>
+						</br>
+						<p><i aria-hidden="true" data-icon="&#xe00d;"></i><a href="https://github.com/hymen81" target="_blank" class=" r5">GitHub</a></p>
+						<p><i aria-hidden="true" data-icon="&#xe01d;"></i><a class=" r5">新北市板橋區</a></p>
+						<p><i aria-hidden="true" data-icon="&#xe00b;"></i><a class=" r5">0910086521</a></p>
 					</span>
                 </div>
             </div>
             <div class="information clearfix">
                 <div class="info_area  info_content">
-                    <h5 v-html="$t('go_through')"></h5>               
-                    <p>Aug 2014 : 從學校碩士班畢業</p>                  
-                    <p>Nov 2014 : 進入Acer當研發替代役 - System Software Engineer</p>
-                    <p>Dec 2014 : 開發Intel RealSense 深度攝影機相關應用軟體</p>
-                    <p>Feb 2015 : 使用.Net C#開發軟體(測試工具,API,APP)</p>
-                    <p>Mar 2015 : 專案 : 筆電UEFI平台開發(A build)</p>
-                    <p>Nov 2015 : Insyde 受訓3個月</p>
-                    <p>Mar 2016 : 開始在下班時兼差開發Web(Asp.Net MVC)</p>
-                    <p>Apr 2016 : 參加人生第一次的黑客松,作品在下方</p>
-                    <p>Oct 2016 : 代表公司參加LOL公司對抗賽(我打TOP) - 冠軍 <a href="https://www.youtube.com/watch?v=nKpaExWiTi8#t=2h0m15s"
-                            target="_blank" class="btn_green btn_go r5">比賽影片點我</a>&nbsp;<a href="https://www.youtube.com/watch?v=pIEMidluo98"
-                            target="_blank" class="btn_green btn_go r5">還有我</a></p>
-                    <p>Feb 2017 : 開發9Dof Sensor相關應用</p>
-                    <a href="javascript:;" class="more_info r5 avatar_pic ">
-                        更多點我
-                    </a>
-                    <!--  <div class="con">
-                        <a href="javascript:;" class="btn_more more_info r5">更多資訊</a>
-                    </div>-->
-                </div>
+                    <h5 v-html="$t('work_experience_name')"></h5>               
+                    <p class="mini_title" v-html="$t('work_experience1.title')"></p>
+					<template v-for="intro of $t('work_experience1.intros')">
+						<li class="tab"> {{intro}}</li>	
+					</template>		
+					<p class="mini_title" v-html="$t('work_experience2.title')"></p>
+					<template v-for="intro of $t('work_experience2.intros')">
+						<li class="tab"> {{intro}}</li>	
+					</template>							
+                </div>			
             </div>
-
-
-
+			
+			 <div class="information clearfix">
+                <div class="info_area  info_content">
+                    <h5 v-html="$t('education_name')"></h5>               
+                    <p class="mini_title" v-html="$t('education1.title')"></p>
+					<template v-for="intro of $t('education1.intros')">
+						<li class="tab"> {{intro}}</li>	
+					</template>	           
+                    <p class="mini_title" v-html="$t('education2.title')"></p>
+					<template v-for="intro of $t('education2.intros')">
+						<li class="tab"> {{intro}}</li>	
+					</template>						
+                </div>
+				
+            </div>
+			
+			 <div class="information clearfix">
+                <div class="info_area  info_content">
+                    <h5 v-html="$t('achievement')"></h5>               
+                   
+					<template v-for="achievement of $t('achievements')">
+						<p > {{achievement.title}}<a v-html="achievement.html"></a></p>	
+						
+					</template>	           						
+                </div>
+				
+            </div>
+			
+			
+	
 
             <!--information-->
             <div class="information clearfix">
@@ -68,48 +86,68 @@
                 <div class="info_area info_left info_content">
                     <h5 v-html="$t('portfolio')"></h5>
                     <ul>
-
                         <!-- Web相關的群組 start-->
                         <li>
                             <h4><i aria-hidden="true" data-icon="&#x4c;"></i>Web</h4>
-                            <p>Web與WebApi</p>
-                            <a href="javascript:;" class="btn_go btn_green btn_group r5" id="web_group">點我展開</i></a>
+                            <p>Web & WebApi</p>
+                            <a href="javascript:;" class="btn_go btn_green btn_group r5" id="web_group" v-html="$t('expand')"></i></a>
                         </li>
-
+						
+						<li class="clearfix">
+                            <div class="web_group" style="display: none;">
+                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>中古車小幫手</h3>
+                                <p>自己用的超實用買車chatbot</p>
+                            </div>
+                            <a href="javascript:;" class="btn_go btn_green mycar8891 r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                        </li>
+						<li class="clearfix">
+                            <div class="web_group" style="display: none;">
+                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>Kinesis Event Viewer</h3>
+                                <p>可以輕鬆觀察丟到AWS Kinesis上的資料</p>
+                            </div>
+                            <a href="javascript:;" class="btn_go btn_green kinesis r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                        </li>
+						<li class="clearfix">
+                            <div class="web_group" style="display: none;">
+                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>抽抽機器人</h3>
+                                <p>有趣的機器人</p>
+                            </div>
+                            <a href="javascript:;" class="btn_go btn_green draw r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                        </li>
                         <li class="clearfix">
                             <div class="web_group" style="display: none;">
                                 <h3><i aria-hidden="true" data-icon="&#x5b;"></i>魚群辨識<em>(團隊)</em></h3>
                                 <p>黑客松的比賽 : 季軍 </p>
                             </div>
-                            <a href="javascript:;" class="btn_go btn_green fish r5 btn_detail">詳細<i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            <a href="javascript:;" class="btn_go btn_green fish r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
                         <li class="clearfix">
                             <div class="web_group" style="display: none;">
                                 <h3><i aria-hidden="true" data-icon="&#x5b;"></i>日文輸入法打中文小工具</h3>
                                 <p>用日文輸入法 打出中文</p>
                             </div>
-                            <a href="javascript:;" class="btn_go btn_green product_2 r5 btn_detail">詳細<i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            <a href="javascript:;" class="btn_go btn_green product_2 r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
                         <li class="clearfix">
                             <div class="web_group" style="display: none;">
                                 <h3><i aria-hidden="true" data-icon="&#x5b;"></i>馬場預約系統</h3>
                                 <p>管理客戶預約資訊的工具</p>
                             </div>
-                            <a href="javascript:;" class="btn_go btn_green booking r5 btn_detail">詳細<i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            <a href="javascript:;" class="btn_go btn_green booking r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
                         <li class="clearfix">
                             <div class="web_group" style="display: none;">
                                 <h3><i aria-hidden="true" data-icon="&#x5b;"></i>搜尋引擎WebAPI</h3>
                                 <p>分別使用龍捲風與Luecne.Net搜尋引擎</p>
                             </div>
-                            <a href="javascript:;" class="btn_go btn_green product_3 r5 btn_detail">詳細<i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            <a href="javascript:;" class="btn_go btn_green product_3 r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
                         <li class="clearfix">
                             <div class="web_group" style="display: none;">
                                 <h3><i aria-hidden="true" data-icon="&#x5b;"></i>達美樂訂披薩API</h3>
                                 <p>訂披薩</p>
                             </div>
-                            <a href="javascript:;" class="btn_go btn_green pizza r5 btn_detail">詳細<i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            <a href="javascript:;" class="btn_go btn_green pizza r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
 
                         
@@ -118,8 +156,8 @@
                         <!--Tool 的群組 start-->
                         <li>
                             <h4><i aria-hidden="true" data-icon="&#x4c;"></i>Tool</h4>
-                            <p>Tool相關作品</p>
-                            <a href="javascript:;" class="btn_go btn_green btn_group r5" id="tool_group">點我展開</i></a>
+                            <p>Tools</p>
+                            <a href="javascript:;" class="btn_go btn_green btn_group r5" id="tool_group" v-html="$t('expand')"></i></a>
                         </li>
                         
                         <li class="clearfix">
@@ -127,14 +165,14 @@
                                 <h3><i aria-hidden="true" data-icon="&#x5b;"></i>3D Camera Testing tool</h3>
                                 <p>公司的研究</p>
                             </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 product_5 btn_detail">詳細<i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            <a href="javascript:;" class="btn_go btn_green r5 product_5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
                         <li class="clearfix">
                             <div class="tool_group" style="display: none;">
                                 <h3><i aria-hidden="true" data-icon="&#x5b;"></i>公司打卡小工具</h3>
                                 <p>公司打卡系統太煩 開發這個省時間</p>
                             </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 card btn_detail">詳細<i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            <a href="javascript:;" class="btn_go btn_green r5 card btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
 
                         <!--Tool 的群組 end-->
@@ -142,8 +180,8 @@
                         <!--UEFI 的群組 start-->
                         <li>
                             <h4><i aria-hidden="true" data-icon="&#x4c;"></i>UEFI</h4>
-                            <p>在UEFI架構中開發的程式</p>
-                            <a href="javascript:;" class="btn_go btn_green btn_group r5" id="uefi_group">點我展開</i></a>
+                            <p>Program developed in UEFI architecture</p>
+                            <a href="javascript:;" class="btn_go btn_green btn_group r5" id="uefi_group" v-html="$t('expand')"></i></a>
                         </li>
 
                         <li class="clearfix">
@@ -151,14 +189,14 @@
                                 <h3><i aria-hidden="true" data-icon="&#x5b;"></i>Win7 preload tool</h3>
                                 <p>在UEFI底下實作GUI tool</p>
                             </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 win7 btn_detail">詳細<i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            <a href="javascript:;" class="btn_go btn_green r5 win7 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
                         <li class="clearfix">
                             <div class="uefi_group" style="display: none;">
                                 <h3><i aria-hidden="true" data-icon="&#x5b;"></i>BIOS遊戲框架</h3>
                                 <p>自己開發的 算是在韌體上執行的遊戲框架</p>
                             </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 bios_game btn_detail">詳細<i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            <a href="javascript:;" class="btn_go btn_green r5 bios_game btn_detail" v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
                         <!--UEFI 的群組 end-->
 
@@ -166,8 +204,8 @@
                         <!--App 的群組 start-->
                         <li>
                             <h4><i aria-hidden="true" data-icon="&#x4c;"></i>APP</h4>
-                            <p>包含Windows與手機上的APP</p>
-                            <a href="javascript:;" class="btn_go btn_green btn_group r5" id="app">點我展開</i></a>
+                            <p>Includes apps on Windows and smart phone</p>
+                            <a href="javascript:;" class="btn_go btn_green btn_group r5" id="app" v-html="$t('expand')"></i></a>
                         </li>
                         
                         <li class="clearfix">
@@ -175,21 +213,21 @@
                                 <h3><i aria-hidden="true" data-icon="&#x5b;"></i>RealSense SDK開發 – 解鎖App</h3>
                                 <p>公司的研究</p>
                             </div>
-                            <a href="javascript:;" class="btn_go btn_green product_4 r5 btn_detail">詳細<i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            <a href="javascript:;" class="btn_go btn_green product_4 r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
                         <li class="clearfix">
                             <div class="app" style="display: none;">
                                 <h3><i aria-hidden="true" data-icon="&#x5b;"></i>我的鐵路自動通知App</h3>
                                 <p>自己無聊開發的台鐵時刻提醒App</p>
                             </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 rail btn_detail">詳細<i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            <a href="javascript:;" class="btn_go btn_green r5 rail btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
                         <li class="clearfix">
                             <div class="app" style="display: none;">
                                 <h3><i aria-hidden="true" data-icon="&#x5b;"></i>求婚驚喜小遊戲</h3>
                                 <p>遠端餵貓</p>
                             </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 swear btn_detail">詳細<i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            <a href="javascript:;" class="btn_go btn_green r5 swear btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
                         <!--App 的群組 end-->
 
@@ -197,8 +235,8 @@
                         <!--Other 的群組 start-->
                         <li>
                             <h4><i aria-hidden="true" data-icon="&#x4c;"></i>Other</h4>
-                            <p>利用空閒時間做的小東西</p>
-                            <a href="javascript:;" class="btn_go btn_green btn_group r5" id="other">點我展開</i></a>
+                            <p>Small things</p>
+                            <a href="javascript:;" class="btn_go btn_green btn_group r5" id="other" v-html="$t('expand')"></i></a>
                         </li>
                         
                         <li class="clearfix">
@@ -206,7 +244,7 @@
                                 <h3><i aria-hidden="true" data-icon="&#x5b;"></i>自動貓咪餵食器</h3>
                                 <p>遠端餵貓</p>
                             </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 cat btn_detail">詳細<i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            <a href="javascript:;" class="btn_go btn_green r5 cat btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
 
                         <li class="clearfix">
@@ -214,7 +252,7 @@
                                 <h3><i aria-hidden="true" data-icon="&#x5b;"></i>聲控遙控車</h3>
                                 <p>利用聲音來遙控車子前進左右</p>
                             </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 speech btn_detail">詳細<i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            <a href="javascript:;" class="btn_go btn_green r5 speech btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
                         <!--Other 的群組 end-->
 
@@ -223,14 +261,14 @@
 
                         <li class="clearfix">
                             <div class="con">
-                                <a href="javascript:;" class="more_info more_works r5">更多作品</a>
+                                <a href="javascript:;" class="more_info more_works r5" v-html="$t('more')"></a>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <!--right-->
                 <div class="info_area info_right info_timeline">
-                    <h5>技能點</h5>
+                    <h5 v-html="$t('skill_set')" ></h5>
                     <dl class="clearfix">
                         <dt>
                             <h6><i aria-hidden="true" data-icon="&#xe00d;"></i>Program
@@ -239,36 +277,7 @@
                         <dd></dd>
                     </dl>
                     <dl class="clearfix">
-                        <dt>HTML<em>5</em> & CSS</dt>
-                        <dd>
-                            <b></b>
-                            <b></b>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-
-                        </dd>
-                    </dl>
-                    <dl class="clearfix">
-                        <dt>Javascript & Jquery</dt>
-                        <dd>
-                            <b></b>
-                            <b></b>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-
-                        </dd>
-                    </dl>
-                    <dl class="clearfix">
+					  <dl class="clearfix">
                         <dt>C</dt>
                         <dd>
                             <b></b>
@@ -298,61 +307,39 @@
 
                         </dd>
                     </dl>
-                    <dl class="clearfix">
-                        <dt>C#</dt>
+					  <dl class="clearfix">
+							<dt>C#</dt>
+							<dd>
+								<b></b>
+								<b></b>
+								<b></b>
+								<b></b>
+								<b></b>
+								<b></b>
+								<b></b>
+								<em></em>
+								<em></em>
+							</dd>
+						</dl>
+						<dl class="clearfix">
+							<dt>Java</dt>
+							<dd>
+								<b></b>
+								<b></b>
+								<b></b>
+								<b></b>
+								<b></b>
+								<b></b>
+								<em></em>
+								<em></em>
+								<em></em>
+							</dd>
+						</dl>
+                        <dt>HTML<em>5</em> & CSS</dt>
                         <dd>
                             <b></b>
                             <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
                             <em></em>
-                            <em></em>
-                        </dd>
-                    </dl>
-                    <dl class="clearfix">
-                        <dt>Java</dt>
-                        <dd>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                        </dd>
-                    </dl>
-                    <dl class="clearfix">
-                        <dt>Ruby</dt>
-                        <dd>
-                            <b></b>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                        </dd>
-                    </dl>
-                    <dl class="clearfix mt20">
-                        <dt>
-                            <h6><i aria-hidden="true" data-icon="&#xe00b;"></i>Platform
-                            </h6>
-                        </dt>
-                        <dd></dd>
-                    </dl>
-                    <dl class="clearfix">
-                        <dt>Android</dt>
-                        <dd>
-                            <b></b>
-                            <b></b>
-                            <b></b>
                             <em></em>
                             <em></em>
                             <em></em>
@@ -362,6 +349,45 @@
 
                         </dd>
                     </dl>
+					<dl class="clearfix">
+                        <dt>Go</dt>
+                        <dd>
+                            <b></b>
+                            <b></b>
+                            <b></b>
+                            <b></b>
+                            <em></em>
+                            <em></em>
+                            <em></em>
+                            <em></em>
+                            <em></em>
+
+                        </dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt>Javascript</dt>
+                        <dd>
+                            <b></b>
+                            <b></b>
+                            <em></em>
+                            <em></em>
+                            <em></em>
+                            <em></em>
+                            <em></em>
+                            <em></em>
+                            <em></em>
+
+                        </dd>
+                    </dl>
+                  
+                                
+                    <dl class="clearfix mt20">
+                        <dt>
+                            <h6><i aria-hidden="true" data-icon="&#xe00b;"></i>Platform
+                            </h6>
+                        </dt>
+                        <dd></dd>
+                    </dl>                  
                     <dl class="clearfix">
                         <dt>ASP.Net MVC</dt>
                         <dd>
@@ -392,23 +418,6 @@
 
                         </dd>
                     </dl>
-
-                    <dl class="clearfix">
-                        <dt>Cocos2D</dt>
-                        <dd>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-
-                        </dd>
-                    </dl>
-
                     <dl class="clearfix">
                         <dt>OpenCV</dt>
                         <dd>
@@ -453,23 +462,28 @@
 
     <!--個人資訊-->
     <div class="tip_avatar">
-        <a href="javascript:;" class="tip_close" aria-hidden="true" data-icon="&#x4d;"></a>
+        <a href="javascript:;" class="tip_close" aria-hidden="false" data-icon="&#x4d;"></a>
         <div class="tip_avatar_con">
             <div class="tip_right">
 
-                <h2>黃臣逸</h2>
+                <h2 v-html="$t('my_name')"></h2>
                 <p>1990/09/02</p>
-                <p>男性</p>
+                <p>Man</p>
                 <p>174cm/58kg</p>
-                <h5>學歷</h5>
-                <p>2005~2008 : 大安高工 電子科</p>
-                <p>2008~2012 : 國立台北科技大學 資工系 學士畢業</p>
-                <p>2012~2014 : 國立台北科技大學 資工所 碩士畢業</p>
-                <h5>工作經歷</h5>
-                <p>2014~2017 : Acer-研發替代役(2017/09/29到期)</p>
+                <h5 v-html="$t('education_name')"></h5>
+				<template v-for="intro of $t('education1.intros')">
+						<p class="tab"> {{intro}}</li>	
+				</template>	
+				<template v-for="intro of $t('education2.intros')">
+						<p class="tab"> {{intro}}</li>	
+				</template>	
+                
+                <h5 v-html="$t('work_experience_name')">工作經歷</h5>
+                <p v-html="$t('work_experience1.title')"></p>
+				<p v-html="$t('work_experience2.title')"></p>
 
 
-                <p class="mt20">聯絡方式</p>
+                <p class="mt20" v-html="$t('contact')"></p>
                 <p><i aria-hidden="true" data-icon="&#xe010;"></i>hymen81@gmail.com</p>               
                 <p><i aria-hidden="true" data-icon="&#xe00b;"></i>0910086521</p>
 
@@ -488,9 +502,62 @@
 
             <!-- 作品 -->
             <div class="carousel-inner">
+			
+			
+				<!--Find my car 8891-->
+                <div class="item active">
+
+            
+                    <div class="descprition">
+                        <h3><i aria-hidden="true" data-icon="&#xe0e6;"></i>中古車小幫手</h3>                       
+                        <p><a href="" target="_blank" class=" r5">原始碼(Github)</a></p>
+						<p>預算有限買不起新車  於是動起買新古車的念頭  喜歡的車款有:CX-5, Eclipse Cross, XV....  最後買到了不到一年的原廠車 省了大概20萬左右</p>				
+
+                        <p>使用Go語言開發 及時從8891獲取最新上架中古車的backend service, 再透過Line chatbot來及時通知我有什麼好貨色</p>
+						<p class="pic">
+                            <img src="images/mycar_01.jpg" alt="" />
+                            <span>Chatbot截圖</span>
+                        </p>      
+						<p class="pic">
+                            <img src="images/mycar_02.jpg" alt="" />
+                            <span>交車</span>
+                        </p>      
+                    </div>
+                </div>
+				
+				<!--kinesis chatbot-->
+                <div class="item">       
+                    <div class="descprition">
+                        <h3><i aria-hidden="true" data-icon="&#xe0e6;"></i>AWS Kinesis Viewer</h3>                                             
+						<p>不同module之間都透過kinesis的event來溝通，所以開發一個大家都可以用的debug工具來觀察payload</p>				
+
+                        <p>使用C#+web socket開發 UI網頁用vue,所以基本上是同步顯示kinesis該stream的內容</p>
+						<p class="pic">
+                            <img src="images/kinesis_01.jpg" alt="" />
+                            <span>截圖</span>
+                        </p>      						   
+                    </div>
+                </div>
+				
+				
+				<!--draw chatbot-->
+                <div class="item">       
+                    <div class="descprition">
+                        <h3><i aria-hidden="true" data-icon="&#xe0e6;"></i>抽抽聊天機器人</h3>                       
+                        <p><a href="https://github.com/hymen81/ACGMKun_LineBot" target="_blank" class=" r5">原始碼(Github)</a></p>
+						<p>可以抽圖跟機器人聊天，也可以抽髒圖</p>				
+
+                        <p>使用nodeJS開發的backend service, Server使用免費的heroku搭配本身提供的CI/CD功能</p>
+						<p class="pic">
+                            <img src="images/draw_01.jpg" alt="" />
+                            <span>Chatbot截圖</span>
+                        </p>      						   
+                    </div>
+                </div>
+			
 
                 <!--CLHY-->
-                <div class="item active">
+                <div class="item">
 
                     <div class="banner product_h1">
 
@@ -871,7 +938,7 @@
         <a href="https://github.com/lduo/resume" target="_blank">本履歷使用此作者樣板  連結至作者原始碼</a>
     </div>-->
 
-    <div class="bye"><span>再見</span></div>
+    <div class="bye"><span>888811111</span></div>
     <!--Jquery 2.1-->
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/jQuery.print.js"></script>
