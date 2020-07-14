@@ -186,6 +186,21 @@ $(function () {
             //$('.info_content ul li .btn_go').hide();
         }
     });
+	
+	
+	$( document ).ready(function() {
+
+$(":button").click(function() {
+//alert(123);
+      html2canvas($(".main")[0],{}).then(function(canvas) {
+          var $div = $("fieldset div");
+          $div.empty();
+          $("<img />", { src: canvas.toDataURL("image/png") }).appendTo($div);
+      });
+    });
+	
+});
+
 
 });
 

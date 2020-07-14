@@ -55,7 +55,34 @@ const messages = {
 	expand : 'Expand',
     collapse : 'Collapse',
 	detail:'Detail',
-	contact :'Contact'
+	contact :'Contact',
+	portfolioMap:{
+		usedCarHelper:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Finding a used car chatbot",
+			subTitle:'Its very helpful to find a used car for me, </br> because I have no enough budget to buy a new one.',
+			detail:'Onw'
+		},
+		kinesisViewer:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Kinesis Event Viewer",
+			subTitle:"Its a tool to easily watch events from AWS Kinesis",
+			detail:''
+		},
+		drawBot:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Draw a picture chatbot",
+			subTitle:"Its a funny chatbot in the friends group",
+			detail:''
+		},
+		fishRecognition:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Fish Recognition",
+			subTitle:"Hackathon, its my first time to join this kind of competition",
+			detail:''
+		},
+		jpInputToChinese:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Using JP input to construct Chinese character",
+			subTitle:"If we only have Japanese input, </br> how can we type a Chinese character?",
+			detail:''
+		}
+	} 
 
   },
   
@@ -130,7 +157,34 @@ const messages = {
 	expand : '點我展開',
     collapse : '點我收合',
 	detail:'詳細',
-	contact :'聯絡方式'
+	contact :'聯絡方式',
+	portfolioMap:{
+		usedCarHelper:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>中古車小幫手",
+			subTitle:"自己用的超實用買車chatbot",
+			detail:''
+		},
+		kinesisViewer:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Kinesis Event Viewer",
+			subTitle:"可以輕鬆觀察丟到AWS Kinesis上的資料",
+			detail:''
+		},
+		drawBot:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>抽抽機器人",
+			subTitle:"有趣的抽圖機器人",
+			detail:''
+		},
+		fishRecognition:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>魚群辨識",
+			subTitle:"一個黑客松的比賽",
+			detail:''
+		},
+		jpInputToChinese:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>日文輸入法打中文小工具",
+			subTitle:"用日文輸入法 打出中文",
+			detail:''
+		}
+	}
     
   }
 }
