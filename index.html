@@ -69,7 +69,6 @@
 			 <div class="information clearfix">
                 <div class="info_area  info_content">
                     <h5 v-html="$t('achievement')"></h5>               
-                   
 					<template v-for="achievement of $t('achievements')">
 						<p > {{achievement.title}}<a v-html="achievement.html"></a></p>	
 						
@@ -78,9 +77,6 @@
 				
             </div>
 			
-			
-	
-
             <!--information-->
             <div class="information clearfix">
                 <!--left-->
@@ -131,27 +127,25 @@
                         </li>
                         <li class="clearfix">
                             <div class="web_group" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>馬場預約系統</h3>
-                                <p>管理客戶預約資訊的工具</p>
+                                <h3 v-html="$t('portfolioMap.horseReservation.title')"></h3>
+                                <p v-html="$t('portfolioMap.horseReservation.subTitle')"></p>
                             </div>
                             <a href="javascript:;" class="btn_go btn_green booking r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
                         <li class="clearfix">
                             <div class="web_group" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>搜尋引擎WebAPI</h3>
-                                <p>分別使用龍捲風與Luecne.Net搜尋引擎</p>
+                                <h3 v-html="$t('portfolioMap.luceneAPI.title')"></h3>
+                                <p v-html="$t('portfolioMap.luceneAPI.subTitle')"></p>
                             </div>
                             <a href="javascript:;" class="btn_go btn_green product_3 r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
                         </li>
                         <li class="clearfix">
                             <div class="web_group" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>達美樂訂披薩API</h3>
-                                <p>訂披薩</p>
+                                <h3 v-html="$t('portfolioMap.dominosAPI.title')"></h3>
+                                <p v-html="$t('portfolioMap.dominosAPI.subTitle')"></p>
                             </div>
                             <a href="javascript:;" class="btn_go btn_green pizza r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
-
-                        
+                        </li>                       
                         <!-- Web相關的群組 end-->
 
                         <!--Tool 的群組 start-->

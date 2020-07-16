@@ -81,6 +81,31 @@ const messages = {
 			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Using JP input to construct Chinese character",
 			subTitle:"If we only have Japanese input, </br> how can we type a Chinese character?",
 			detail:''
+		},
+		horseReservation:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>A reservation system for equestrian",
+			subTitle:"Customer can reserve a coach who is teaching equestrian",
+			detail:''
+		},
+		luceneAPI:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Developing an API to search books base on Lucene",
+			subTitle:"Its a search system",
+			detail:''
+		},
+		dominosAPI:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Provide an API to order dominos pizza",
+			subTitle:"Its an order pizza api",
+			detail:''
+		},
+		threeDCamera:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Testing tool for 3D Camera",
+			subTitle:"To valid device",
+			detail:''
+		},
+		autoPunchIn:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Automatically punch in",
+			subTitle:"For punching in",
+			detail:''
 		}
 	} 
 
@@ -182,6 +207,31 @@ const messages = {
 		jpInputToChinese:{
 			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>日文輸入法打中文小工具",
 			subTitle:"用日文輸入法 打出中文",
+			detail:''
+		},
+		horseReservation:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>馬場預約系統",
+			subTitle:"管理客戶預約資訊的工具",
+			detail:''
+		},
+		luceneAPI:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>搜尋引擎WebAPI",
+			subTitle:"Luecne.Net搜尋引擎",
+			detail:''
+		},
+		dominosAPI:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>達美樂訂披薩API",
+			subTitle:"訂披薩",
+			detail:''
+		},
+		threeDCamera:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>測試3D camera的程式",
+			subTitle:"專為3D camera開發",
+			detail:''
+		},
+		autoPunchIn:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>自動打卡小工具",
+			subTitle:"幫忙自動上班打卡",
 			detail:''
 		}
 	}
