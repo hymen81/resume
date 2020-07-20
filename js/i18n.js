@@ -106,6 +106,41 @@ const messages = {
 			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Automatically punch in",
 			subTitle:"For punching in",
 			detail:''
+		},
+		uefiGUITool:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Win7 preload tool",
+			subTitle:"Its a tool that executed under UEFI shell",
+			detail:''
+		},
+		biosGame:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>UEFI Flippy Bird",
+			subTitle:"Its a game that executed under UEFI shell",
+			detail:''
+		},
+		realSense:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Unlock App under RealSenseSDK",
+			subTitle:"We use the depth camera to capture hand gesture, </br> and base on that to implement a unlock app",
+			detail:''
+		},
+		myRailWayNotifier:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>My Rail Way Notifier",
+			subTitle:"Its an android APP to notify me </br> what time is the next train will be arriving, </br> then I have enough time to catch up ",
+			detail:''
+		},
+		iSwearGame:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Propose Marriage Game",
+			subTitle:"Its a game developed by cocos2d",
+			detail:''
+		},
+		catFeeding:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Cat Feeding Machine",
+			subTitle:"Remote to feed the cat",
+			detail:''
+		},
+		voiceRCCar:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Vocie Controlled RC Car",
+			subTitle:"Using voice to control RC car to turn right/left and go back/forward",
+			detail:''
 		}
 	} 
 
@@ -232,6 +267,41 @@ const messages = {
 		autoPunchIn:{
 			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>自動打卡小工具",
 			subTitle:"幫忙自動上班打卡",
+			detail:''
+		},
+		uefiGUITool:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>給win7用的driver預載tool",
+			subTitle:"在UEFI底下實作GUI tool",
+			detail:''
+		},
+		biosGame:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>BIOS遊戲-Flippy Bird",
+			subTitle:"在bios架構中開發一個遊戲框架",
+			detail:''
+		},
+		realSense:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>解鎖App",
+			subTitle:"利用RealSense SDK 去開發一個解鎖APP",
+			detail:''
+		},
+		myRailWayNotifier:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>我的鐵路自動通知App",
+			subTitle:"這個app會提醒我最近的一班火車時間",
+			detail:''
+		},
+		iSwearGame:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>求婚大作戰小遊戲",
+			subTitle:"讓女方玩遊戲 玩到結局就是求婚",
+			detail:''
+		},
+		catFeeding:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>自動貓咪餵食器",
+			subTitle:"遠端餵貓",
+			detail:''
+		},
+		voiceRCCar:{
+			title:"<i aria-hidden='true' data-icon='&#x5b;'/></i>Vocie Controlled RC Car",
+			subTitle:"遠端餵貓",
 			detail:''
 		}
 	}
