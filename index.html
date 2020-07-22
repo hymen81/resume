@@ -39,45 +39,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="information clearfix">
-                    <div class="info_area  info_content">
-                        <h5 v-html="$t('work_experience_name')"></h5>
-                        <p class="mini_title" v-html="$t('work_experience1.title')"></p>
-                        <template v-for="intro of $t('work_experience1.intros')">
-                            <li class="tab"> {{intro}}</li>
-                        </template>
-                        <p class="mini_title" v-html="$t('work_experience2.title')"></p>
-                        <template v-for="intro of $t('work_experience2.intros')">
-                            <li class="tab"> {{intro}}</li>
-                        </template>
-                    </div>
-                </div>
-
-                <div class="information clearfix">
-                    <div class="info_area  info_content">
-                        <h5 v-html="$t('education_name')"></h5>
-                        <p class="mini_title" v-html="$t('education1.title')"></p>
-                        <template v-for="intro of $t('education1.intros')">
-                            <li class="tab"> {{intro}}</li>
-                        </template>
-                        <p class="mini_title" v-html="$t('education2.title')"></p>
-                        <template v-for="intro of $t('education2.intros')">
-                            <li class="tab"> {{intro}}</li>
-                        </template>
-                    </div>
-
-                </div>
-
-                <div class="information clearfix">
-                    <div class="info_area  info_content">
-                        <h5 v-html="$t('achievement')"></h5>
-                        <template v-for="achievement of $t('achievements')">
-                            <p> {{achievement.title}}<a v-html="achievement.html"></a></p>
-
-                        </template>
-                    </div>
-
-                </div>
+               
 
                 <!--information-->
                 <div class="information clearfix">
@@ -470,6 +432,46 @@
                         </dl>
 
 
+                    </div>
+
+                </div>
+
+                <div class="information clearfix">
+                    <div class="info_area  info_content">
+                        <h5 v-html="$t('work_experience_name')"></h5>
+                        <p class="mini_title" v-html="$t('work_experience1.title')"></p>
+                        <template v-for="intro of $t('work_experience1.intros')">
+                            <li class="tab"> {{intro}}</li>
+                        </template>
+                        <p class="mini_title" v-html="$t('work_experience2.title')"></p>
+                        <template v-for="intro of $t('work_experience2.intros')">
+                            <li class="tab"> {{intro}}</li>
+                        </template>
+                    </div>
+                </div>
+
+                <div class="information clearfix">
+                    <div class="info_area  info_content">
+                        <h5 v-html="$t('education_name')"></h5>
+                        <p class="mini_title" v-html="$t('education1.title')"></p>
+                        <template v-for="intro of $t('education1.intros')">
+                            <li class="tab"> {{intro}}</li>
+                        </template>
+                        <p class="mini_title" v-html="$t('education2.title')"></p>
+                        <template v-for="intro of $t('education2.intros')">
+                            <li class="tab"> {{intro}}</li>
+                        </template>
+                    </div>
+
+                </div>
+
+                <div class="information clearfix">
+                    <div class="info_area  info_content">
+                        <h5 v-html="$t('achievement')"></h5>
+                        <template v-for="achievement of $t('achievements')">
+                            <p> {{achievement.title}}<a v-html="achievement.html"></a></p>
+
+                        </template>
                     </div>
 
                 </div>
@@ -931,17 +933,22 @@
                         <div class="descprition">
                             <h3 v-html="$t('portfolioMap.iSwearGame.title')"></h3>
                             <p><a href="https://github.com/hymen81/Iswear_Game" target="_blank"
-                                    class=" r5">原始碼(Github)</a></p>
+                                    class=" r5">Source Code(Github)</a></p>
                             <p>最近有認識的人想求婚，之前在網路上看到有工程師寫遊戲給女友玩，破關之後就是求婚的訊息，我也想做一個類似的，剛好學習新的cocos2d引擎還有複習C++與design
                                 pattern，美術自己當，且尚未完成。</p>
+
+                            <p>It's game I developed by cocos2D & C++, The game that is used in popping the question.</p>
+                            <p>Girl who will be proposed but she must play this game first, and when she finishing the game, the screen will pop out a message: "Did you wanna marry me?".</p>
 
                             <p class="pic">
                                 <img src="images/swear_01.jpg" alt="" />
                                 <span>遊戲畫面1</span>
+                                <span>snapshot of game 1</span>
                             </p>
                             <p class="pic">
                                 <img src="images/swear_02.jpg" alt="" />
                                 <span>遊戲畫面2</span>
+                                <span>snapshot of game 2</span>
                             </p>
 
 
@@ -955,12 +962,18 @@
                         <div class="descprition">
                             <h3 v-html="$t('portfolioMap.dominosAPI.title')"></h3>
                             <p>智慧語音助理的其中一個功能:訂披薩。</p>
+                            
                             <p>我幫忙去分析達美樂官網的定Pizza系統Http封包，並且幫忙製作成API讓外部可以直接呼API來線上定披薩。</p>
+
+                            <p>We developed a voice assistant of which one of functions is order a pizzea.</p>
+                            <p>I helped to analyze the domino's' ordering system and wrapped it into the API.</p>
+                            <p>We can invoke these APIs to order pizza easily.</p>
 
 
                             <p class="pic">
                                 <img src="images/pizza_01.jpg" alt="" />
                                 <span>用Chrome分析</span>
+                                <span>Analyze the behavior</span>
                             </p>
                             <p class="pic">
                                 <img src="images/pizza_02.jpg" alt="" />
@@ -979,10 +992,12 @@
                         <div class="descprition">
                             <h3 v-html="$t('portfolioMap.voiceRCCar.title')"></h3>
                             <p>利用Android內建的語音辨識功能，辨識出前進左右的指令，透過wifi傳遞至遙控車上的arduino板子，接收到命令後的arduino再去控制遙控車</p>
-
+                            <p>Using voice recognition to fidget out what command we sent, and passed commands to arduino board.</p>
+                            <p>The RC car will be controlled by arduino.</p>
                             <p class="pic">
                                 <img src="images/speech.jpg" alt="" />
                                 <span>整體架構圖與成品</span>
+                                <span>Architecture & Product</span>
                             </p>
 
                         </div>
@@ -997,9 +1012,10 @@
                             <div class="banner_bg"></div>
                         </div>
                         <div class="descprition">
-                            <h3><i aria-hidden="true" data-icon="&#xe0e8;"></i>更多作品</h3>
+                            <h3><i aria-hidden="true" data-icon="&#xe0e8;"></i>更多作品 More Portfolios</h3>
                             <a href="https://drive.google.com/file/d/0Bz7RR3lVHoLnRTR6UjJLenJzc0E/view?usp=sharing">
                                 <p>此網頁只展示部分作品 更多我的作品(包含學生時期)請點我觀看</p>
+                                <p>More portfolios in this link (Chinese Only).</p>
                             </a>
                         </div>
 
@@ -1025,7 +1041,7 @@
         <!--<div class="footer clearfix">
         Template By LDuo
         <a href="https://github.com/lduo/resume" target="_blank">本履歷使用此作者樣板  連結至作者原始碼</a>
-    </div>-->
+        </div>-->
 
         <div class="bye"><span>888811111</span></div>
         <!--Jquery 2.1-->

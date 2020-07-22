@@ -5,24 +5,19 @@ const messages = {
 	job_name: 'TrendMicro - Senior Backend Engineer',
 	work_experience_name: 'Work Experience',
 	work_experience1:{
-		title:'Senior Backend Engineer - TrendMicro ,  2017.10 - present',
-		intros:['Developing WCF service via C#',
-		'MSSQL DB schema design (table design & stored procedure design)',
-		'Developing utility tools for debugging',
-		'Developing RESTful service via JAVA',
-		'API design document',
-		'DynamoDB schema design'
+		title:'Senior Backend Engineer - TrendMicro ,  2017.10 - 現在',
+		intros:['Responsible for developing WCF service',
+		'Responsible for developing utility tools for debugging',
+		'Responsible for developing microservice on AWS k8s',
+		'Collaborating with other teams to solve the problem'
 		]
 	},
 	work_experience2:{
 		title:'System Software Engineer - Acer ,  2014.11 - 2017.10',
-		intros:['Windows tool & application developer via C#',
-		'Product(Laptop/Desktop) quality verification tool',
-		'3D Camera color calibration tool',
-		'9DoF Sensor application for VR project',
-		'Developing the UEFI-Shell GUI tool',
-		'Developing UEFI BIOS for Laptop',
-		'Insyde UEFI Training(3 months)'
+		intros:['Responsible for developing Windows application in C#',
+		'Responsible for developing the UEFI-Shell GUI tools',
+		'Responsible for developing UEFI BIOS for Laptop',
+		'Was sent to Insyde Software Corp. for BIOS skill training for 3 months'
 		]
 	},
 	education_name: "Education",
@@ -39,14 +34,11 @@ const messages = {
 		]
 	},
 	achievement: 'Achievement',
-	achievements: [{title:'Nov 2014 : Work for Acer with R&D Substitute Services',html:""},
-	{title:'Apr 2016 : Hackathon 3rd award',html:""},
-	{title:'Mar 2016 : Part time job for web development',html:""},
-	{title:'Oct 2016 : LOL company competition - Champion',html:'<a href="https://www.youtube.com/watch?v=nKpaExWiTi8#t=2h0m15s"target="_blank" class="btn_green btn_go r5"> video link </a>'},
-	{title:'Oct 2017 : Start work for TrendMicro - Senior Backend Engineer',html:""},
-	{title:'Nov 2018 : TrendMicro AI Contest in Fukuoka (Top 15 in 300 teams)',html:""},
-	{title:'Dec 2018 : Employee of the Quarter award',html:""},
-	{title:'Jun 2019 : AWS Taipei Summit DeepRacer 13th',html:'<a href="https://aws.amazon.com/tw/deepracer/schedule-and-standings/leaderboard-taipei-summit/"target="_blank" class="btn_green btn_go r5"> link </a>'},
+	achievements: [{title:'Employee of the Quarter (EOQ) Award at Trend Micro',html:""},
+	{title:'Trend Micro AI Contest Top 10 Award in Fukuoka',html:""},
+	{title:'3rd place winner in the Hackathon',html:""},
+	{title:'LOL company competition - Champion',html:'<a href="https://www.youtube.com/watch?v=nKpaExWiTi8#t=2h0m15s"target="_blank" class="btn_green btn_go r5"> video link </a>'},
+	{title:'AWS Taipei Summit DeepRacer 13th',html:'<a href="https://aws.amazon.com/tw/deepracer/schedule-and-standings/leaderboard-taipei-summit/"target="_blank" class="btn_green btn_go r5"> link </a>'}
 	],
 	portfolio: 'Portfolio',
 	skills: 'Skills',
@@ -169,23 +161,18 @@ const messages = {
 	work_experience_name: '工作經驗',
 	work_experience1:{
 		title:'Senior Backend Engineer - 趨勢科技 ,  2017.10 - 現在',
-		intros:['Developing WCF service via C#',
-		'MSSQL DB schema design (table design & stored procedure design)',
-		'Developing utility tools for debugging',
-		'Developing RESTful service via JAVA',
-		'API design document',
-		'DynamoDB schema design'
+		intros:['用C#開發WCF相關API',
+		'使用微服務的方式開發RESTful相關API',
+		'開發一些工具讓troble shooting更方便',
+		'與多個team合作來討論需要被開發的功能與釐清問題'
 		]
 	},
 	work_experience2:{
 		title:'System Software Engineer - 宏碁 ,  2014.11 - 2017.10',
-		intros:['Windows tool & application developer via C#',
-		'Product(Laptop/Desktop) quality verification tool',
-		'3D Camera color calibration tool',
-		'9DoF Sensor application for VR project',
-		'Developing the UEFI-Shell GUI tool',
-		'Developing UEFI BIOS for Laptop',
-		'Insyde UEFI Training(3 months)'
+		intros:['負責開發windows App',
+		'開發UEFI相關App與tools',
+		'Porting UEFI bios到筆電上並且開發客製化功能',
+		'在Insyde接受為期三個月的uefi相關訓練'
 		]
 	},
 	education1:{
@@ -201,14 +188,11 @@ const messages = {
 		]
 	},
 	achievement: '成就',
-	achievements: [{title:'Nov 2014 : Work for Acer with R&D Substitute Services',html:""},
-	{title:'Apr 2016 : Hackathon 3rd award',html:""},
-	{title:'Mar 2016 : Part time job for web development',html:""},
-	{title:'Oct 2016 : LOL company competition - Champion',html:'<a href="https://www.youtube.com/watch?v=nKpaExWiTi8#t=2h0m15s"target="_blank" class="btn_green btn_go r5"> video link </a>'},
-	{title:'Oct 2017 : Start work for TrendMicro - Senior Backend Engineer',html:""},
-	{title:'Nov 2018 : TrendMicro AI Contest in Fukuoka (Top 15 in 300 teams)',html:""},
-	{title:'Dec 2018 : Employee of the Quarter award',html:""},
-	{title:'Jun 2019 : AWS Taipei Summit DeepRacer 13th',html:'<a href="https://aws.amazon.com/tw/deepracer/schedule-and-standings/leaderboard-taipei-summit/"target="_blank" class="btn_green btn_go r5"> link </a>'},
+	achievements: [{title:'最佳員工 at Trend Micro',html:""},
+	{title:'趨勢ai contest前10名',html:""},
+	{title:'黑客松比賽帶三名',html:""},
+	{title:'LOL公司對抗賽冠軍',html:'<a href="https://www.youtube.com/watch?v=nKpaExWiTi8#t=2h0m15s"target="_blank" class="btn_green btn_go r5"> video link </a>'},
+	{title:'AWS Taipei Summit DeepRacer 13名',html:'<a href="https://aws.amazon.com/tw/deepracer/schedule-and-standings/leaderboard-taipei-summit/"target="_blank" class="btn_green btn_go r5"> link </a>'}
 	],
 	portfolio: '作品集',
 	skills: '技能點',
