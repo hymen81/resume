@@ -5,7 +5,7 @@ const messages = {
 	job_name: 'TrendMicro - Senior Backend Engineer',
 	work_experience_name: 'Work Experience',
 	work_experience1:{
-		title:'Senior Backend Engineer - TrendMicro ,  2017.10 - 現在',
+		title:'Senior Backend Engineer - TrendMicro ,  2017.10 - Present',
 		intros:['Responsible for developing WCF service',
 		'Responsible for developing utility tools for debugging',
 		'Responsible for developing microservice on AWS k8s',
