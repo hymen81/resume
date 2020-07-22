@@ -4,9 +4,9 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta property="og:title" content="Resume"/>
-    <meta property="og:image" content="http://i.imgur.com/w1QsvFg.jpg"/>
-    <meta property="og:description" content="Billy Huang's Resume"/>
+    <meta property="og:title" content="Resume" />
+    <meta property="og:image" content="http://i.imgur.com/w1QsvFg.jpg" />
+    <meta property="og:description" content="Billy Huang's Resume" />
     <link href="css/pace-theme-flash.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
@@ -15,946 +15,1050 @@
 </head>
 
 <body>
-    <div class="main">
-        <div class="content">
-            <!--header-->
-            <div class="header clearfix">
-                <div class="avatar">
-                    <a href="javascript:;" class="avatar_pic circle"><em class="circle doing">Detail</em></a>
-                    <b class="doing r5">Man</b>
+    <div class="mainapp">
+        <div class="main">
+            <div class="content">
+                <!--header-->
+                <div class="header clearfix">
+                    <div class="avatar">
+                        <a href="javascript:;" class="avatar_pic circle"><em class="circle doing">Detail</em></a>
+                        <b class="doing r5">Man</b>
+                    </div>
+                    <div class="base">
+                        <h2 v-html="$t('my_name')"></h2>
+                        <p v-html="$t('job_name')"></p>
+                        <span>
+                            <p><a href="javascript:;" class="r5" v-on:click="changeToChinese">中文版</a>
+                                <a href="javascript:;" class="r5" v-on:click="changeToEnglish">English</a></p>
+                            </br>
+                            <p><i class="icon_drive" aria-hidden="true"></i><a href="https://github.com/hymen81"
+                                    target="_blank" class=" r5">GitHub</a></p>
+                            <p><i class="icon_map" aria-hidden="true"></i><a class=" r5">新北市板橋區</a></p>
+                            <p><i class="icon_phone" aria-hidden="true"></i><a class=" r5">0910086521</a></p>
+                            <p><i class="icon_mail" aria-hidden="true"></i><a class=" r5">hymen81@gmail.com</a></p>
+                        </span>
+                    </div>
                 </div>
-                <div class="base">
-                    <h2 v-html="$t('my_name')"></h2>
-                    <p v-html="$t('job_name')"></p>			
-                    <span>
-						<p><a href="javascript:;" class="r5" v-on:click="changeToChinese">中文版</a>
-						<a href="javascript:;" class="r5" v-on:click="changeToEnglish">English</a></p>
-						</br>
-						<p><i class="icon_drive" aria-hidden="true" ></i><a href="https://github.com/hymen81" target="_blank" class=" r5">GitHub</a></p>
-						<p><i class="icon_map" aria-hidden="true"></i><a class=" r5">新北市板橋區</a></p>
-						<p><i class="icon_phone"aria-hidden="true" ></i><a class=" r5">0910086521</a></p>
-                        <p><i class="icon_mail" aria-hidden="true" ></i><a class=" r5">hymen81@gmail.com</a></p>
-					</span>
-                </div>
-            </div>
-            <div class="information clearfix">
-                <div class="info_area  info_content">
-                    <h5 v-html="$t('work_experience_name')"></h5>               
-                    <p class="mini_title" v-html="$t('work_experience1.title')"></p>
-					<template v-for="intro of $t('work_experience1.intros')">
-						<li class="tab"> {{intro}}</li>	
-					</template>		
-					<p class="mini_title" v-html="$t('work_experience2.title')"></p>
-					<template v-for="intro of $t('work_experience2.intros')">
-						<li class="tab"> {{intro}}</li>	
-					</template>							
-                </div>			
-            </div>
-			
-			 <div class="information clearfix">
-                <div class="info_area  info_content">
-                    <h5 v-html="$t('education_name')"></h5>               
-                    <p class="mini_title" v-html="$t('education1.title')"></p>
-					<template v-for="intro of $t('education1.intros')">
-						<li class="tab"> {{intro}}</li>	
-					</template>	           
-                    <p class="mini_title" v-html="$t('education2.title')"></p>
-					<template v-for="intro of $t('education2.intros')">
-						<li class="tab"> {{intro}}</li>	
-					</template>						
-                </div>
-				
-            </div>
-			
-			 <div class="information clearfix">
-                <div class="info_area  info_content">
-                    <h5 v-html="$t('achievement')"></h5>               
-                   
-					<template v-for="achievement of $t('achievements')">
-						<p > {{achievement.title}}<a v-html="achievement.html"></a></p>	
-						
-					</template>	           						
-                </div>
-				
-            </div>
-			
-			
-	
+               
 
-            <!--information-->
-            <div class="information clearfix">
-                <!--left-->
-                <div class="info_area info_left info_content">
-                    <h5 v-html="$t('portfolio')"></h5>
-                    <ul>
-                        <!-- Web相關的群組 start-->
-                        <li>
-                            <h4><i aria-hidden="true" data-icon="&#x4c;"></i>Web</h4>
-                            <p>Web & WebApi</p>
-                            <a href="javascript:;" class="btn_go btn_green btn_group r5" id="web_group" v-html="$t('expand')"></i></a>
-                        </li>
-						
-						<li class="clearfix">
-                            <div class="web_group" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>中古車小幫手</h3>
-                                <p>自己用的超實用買車chatbot</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green mycar8891 r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
-						<li class="clearfix">
-                            <div class="web_group" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>Kinesis Event Viewer</h3>
-                                <p>可以輕鬆觀察丟到AWS Kinesis上的資料</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green kinesis r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
-						<li class="clearfix">
-                            <div class="web_group" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>抽抽機器人</h3>
-                                <p>有趣的機器人</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green draw r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
-                        <li class="clearfix">
-                            <div class="web_group" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>魚群辨識<em>(團隊)</em></h3>
-                                <p>黑客松的比賽 : 季軍 </p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green fish r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
-                        <li class="clearfix">
-                            <div class="web_group" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>日文輸入法打中文小工具</h3>
-                                <p>用日文輸入法 打出中文</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green product_2 r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
-                        <li class="clearfix">
-                            <div class="web_group" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>馬場預約系統</h3>
-                                <p>管理客戶預約資訊的工具</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green booking r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
-                        <li class="clearfix">
-                            <div class="web_group" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>搜尋引擎WebAPI</h3>
-                                <p>分別使用龍捲風與Luecne.Net搜尋引擎</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green product_3 r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
-                        <li class="clearfix">
-                            <div class="web_group" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>達美樂訂披薩API</h3>
-                                <p>訂披薩</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green pizza r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
+                <!--information-->
+                <div class="information clearfix">
+                    <!--left-->
+                    <div class="info_area info_left info_content">
+                        <h5 v-html="$t('portfolio')"></h5>
+                        <ul>
+                            <!-- Web相關的群組 start-->
+                            <li>
+                                <h4><i aria-hidden="true" data-icon="&#x4c;"></i>Web</h4>
+                                <p>Web & WebApi</p>
+                                <a href="javascript:;" class="btn_go btn_green btn_group r5" id="web_group"
+                                    v-html="$t('expand')"></i></a>
+                            </li>
 
-                        
-                        <!-- Web相關的群組 end-->
+                            <li class="clearfix">
+                                <div class="web_group" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.usedCarHelper.title')"></h3>
+                                    <p v-html="$t('portfolioMap.usedCarHelper.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green mycar8891 r5 btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+                            <li class="clearfix">
+                                <div class="web_group" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.kinesisViewer.title')"></h3>
+                                    <p v-html="$t('portfolioMap.kinesisViewer.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green kinesis r5 btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+                            <li class="clearfix">
+                                <div class="web_group" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.drawBot.title')"></h3>
+                                    <p v-html="$t('portfolioMap.drawBot.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green draw r5 btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+                            <li class="clearfix">
+                                <div class="web_group" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.fishRecognition.title')"></h3>
+                                    <p v-html="$t('portfolioMap.fishRecognition.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green fish r5 btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+                            <li class="clearfix">
+                                <div class="web_group" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.jpInputToChinese.title')"></h3>
+                                    <p v-html="$t('portfolioMap.jpInputToChinese.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green product_2 r5 btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+                            <li class="clearfix">
+                                <div class="web_group" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.horseReservation.title')"></h3>
+                                    <p v-html="$t('portfolioMap.horseReservation.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green booking r5 btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+                            <li class="clearfix">
+                                <div class="web_group" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.luceneAPI.title')"></h3>
+                                    <p v-html="$t('portfolioMap.luceneAPI.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green product_3 r5 btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+                            <li class="clearfix">
+                                <div class="web_group" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.dominosAPI.title')"></h3>
+                                    <p v-html="$t('portfolioMap.dominosAPI.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green pizza r5 btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+                            <!-- Web相關的群組 end-->
 
-                        <!--Tool 的群組 start-->
-                        <li>
-                            <h4><i aria-hidden="true" data-icon="&#x4c;"></i>Tool</h4>
-                            <p>Tools</p>
-                            <a href="javascript:;" class="btn_go btn_green btn_group r5" id="tool_group" v-html="$t('expand')"></i></a>
-                        </li>
-                        
-                        <li class="clearfix">
-                            <div class="tool_group" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>3D Camera Testing tool</h3>
-                                <p>公司的研究</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 product_5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
-                        <li class="clearfix">
-                            <div class="tool_group" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>公司打卡小工具</h3>
-                                <p>公司打卡系統太煩 開發這個省時間</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 card btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
+                            <!--Tool 的群組 start-->
+                            <li>
+                                <h4><i aria-hidden="true" data-icon="&#x4c;"></i>Tool</h4>
+                                <p>Tools</p>
+                                <a href="javascript:;" class="btn_go btn_green btn_group r5" id="tool_group"
+                                    v-html="$t('expand')"></i></a>
+                            </li>
 
-                        <!--Tool 的群組 end-->
+                            <li class="clearfix">
+                                <div class="tool_group" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.threeDCamera.title')"></h3>
+                                    <p v-html="$t('portfolioMap.threeDCamera.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green r5 product_5 btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+                            <li class="clearfix">
+                                <div class="tool_group" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.autoPunchIn.title')"></h3>
+                                    <p v-html="$t('portfolioMap.autoPunchIn.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green r5 card btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
 
-                        <!--UEFI 的群組 start-->
-                        <li>
-                            <h4><i aria-hidden="true" data-icon="&#x4c;"></i>UEFI</h4>
-                            <p>Program developed in UEFI architecture</p>
-                            <a href="javascript:;" class="btn_go btn_green btn_group r5" id="uefi_group" v-html="$t('expand')"></i></a>
-                        </li>
+                            <!--Tool 的群組 end-->
 
-                        <li class="clearfix">
-                            <div class="uefi_group" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>Win7 preload tool</h3>
-                                <p>在UEFI底下實作GUI tool</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 win7 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
-                        <li class="clearfix">
-                            <div class="uefi_group" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>BIOS遊戲框架</h3>
-                                <p>自己開發的 算是在韌體上執行的遊戲框架</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 bios_game btn_detail" v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
-                        <!--UEFI 的群組 end-->
+                            <!--UEFI 的群組 start-->
+                            <li>
+                                <h4><i aria-hidden="true" data-icon="&#x4c;"></i>UEFI</h4>
+                                <p>Program developed in UEFI architecture</p>
+                                <a href="javascript:;" class="btn_go btn_green btn_group r5" id="uefi_group"
+                                    v-html="$t('expand')"></i></a>
+                            </li>
+
+                            <li class="clearfix">
+                                <div class="uefi_group" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.uefiGUITool.title')"></h3>
+                                    <p v-html="$t('portfolioMap.uefiGUITool.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green r5 win7 btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+                            <li class="clearfix">
+                                <div class="uefi_group" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.biosGame.title')"></h3>
+                                    <p v-html="$t('portfolioMap.biosGame.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green r5 bios_game btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+                            <!--UEFI 的群組 end-->
 
 
-                        <!--App 的群組 start-->
-                        <li>
-                            <h4><i aria-hidden="true" data-icon="&#x4c;"></i>APP</h4>
-                            <p>Includes apps on Windows and smart phone</p>
-                            <a href="javascript:;" class="btn_go btn_green btn_group r5" id="app" v-html="$t('expand')"></i></a>
-                        </li>
-                        
-                        <li class="clearfix">
-                            <div class="app" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>RealSense SDK開發 – 解鎖App</h3>
-                                <p>公司的研究</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green product_4 r5 btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
-                        <li class="clearfix">
-                            <div class="app" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>我的鐵路自動通知App</h3>
-                                <p>自己無聊開發的台鐵時刻提醒App</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 rail btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
-                        <li class="clearfix">
-                            <div class="app" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>求婚驚喜小遊戲</h3>
-                                <p>遠端餵貓</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 swear btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
-                        <!--App 的群組 end-->
+                            <!--App 的群組 start-->
+                            <li>
+                                <h4><i aria-hidden="true" data-icon="&#x4c;"></i>APP</h4>
+                                <p>Includes apps on Windows and smart phone</p>
+                                <a href="javascript:;" class="btn_go btn_green btn_group r5" id="app"
+                                    v-html="$t('expand')"></i></a>
+                            </li>
+
+                            <li class="clearfix">
+                                <div class="app" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.realSense.title')"></h3>
+                                    <p v-html="$t('portfolioMap.realSense.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green product_4 r5 btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+                            <li class="clearfix">
+                                <div class="app" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.myRailWayNotifier.title')"></h3>
+                                    <p v-html="$t('portfolioMap.myRailWayNotifier.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green r5 rail btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+                            <li class="clearfix">
+                                <div class="app" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.iSwearGame.title')"></h3>
+                                    <p v-html="$t('portfolioMap.iSwearGame.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green r5 swear btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+                            <!--App 的群組 end-->
 
 
-                        <!--Other 的群組 start-->
-                        <li>
-                            <h4><i aria-hidden="true" data-icon="&#x4c;"></i>Other</h4>
-                            <p>Small things</p>
-                            <a href="javascript:;" class="btn_go btn_green btn_group r5" id="other" v-html="$t('expand')"></i></a>
-                        </li>
-                        
-                        <li class="clearfix">
-                            <div class="other" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>自動貓咪餵食器</h3>
-                                <p>遠端餵貓</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 cat btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
+                            <!--Other 的群組 start-->
+                            <li>
+                                <h4><i aria-hidden="true" data-icon="&#x4c;"></i>Other</h4>
+                                <p>Small things</p>
+                                <a href="javascript:;" class="btn_go btn_green btn_group r5" id="other"
+                                    v-html="$t('expand')"></i></a>
+                            </li>
 
-                        <li class="clearfix">
-                            <div class="other" style="display: none;">
-                                <h3><i aria-hidden="true" data-icon="&#x5b;"></i>聲控遙控車</h3>
-                                <p>利用聲音來遙控車子前進左右</p>
-                            </div>
-                            <a href="javascript:;" class="btn_go btn_green r5 speech btn_detail"v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
-                        </li>
-                        <!--Other 的群組 end-->
+                            <li class="clearfix">
+                                <div class="other" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.catFeeding.title')"></h3>
+                                    <p v-html="$t('portfolioMap.catFeeding.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green r5 cat btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+
+                            <li class="clearfix">
+                                <div class="other" style="display: none;">
+                                    <h3 v-html="$t('portfolioMap.voiceRCCar.title')"></h3>
+                                    <p v-html="$t('portfolioMap.voiceRCCar.subTitle')"></p>
+                                </div>
+                                <a href="javascript:;" class="btn_go btn_green r5 speech btn_detail"
+                                    v-html="$t('detail')"><i aria-hidden="true" data-icon="&#x35;"></i></a>
+                            </li>
+                            <!--Other 的群組 end-->
 
 
 
 
-                        <li class="clearfix">
-                            <div class="con">
-                                <a href="javascript:;" class="more_info more_works r5" v-html="$t('more')"></a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <!--right-->
-                <div class="info_area info_right info_timeline">
-                    <h5 v-html="$t('skill_set')" ></h5>
-                    <dl class="clearfix">
-                        <dt>
-                            <h6><i aria-hidden="true" data-icon="&#xe00d;"></i>Program
+                            <li class="clearfix">
+                                <div class="con">
+                                    <a href="javascript:;" class="more_info more_works r5" v-html="$t('more')"></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--right-->
+                    <div class="info_area info_right info_timeline">
+                        <h5 v-html="$t('skill_set')"></h5>
+                        <dl class="clearfix">
+                            <dt>
+                                <h6><i aria-hidden="true" data-icon="&#xe00d;"></i>Program
                                 </h6>
-                        </dt>
-                        <dd></dd>
-                    </dl>
-                    <dl class="clearfix">
-					  <dl class="clearfix">
-                        <dt>C</dt>
-                        <dd>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <em></em>
+                            </dt>
+                            <dd></dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dl class="clearfix">
+                                <dt>C</dt>
+                                <dd>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <em></em>
 
-                        </dd>
-                    </dl>
-                    <dl class="clearfix">
-                        <dt>C++</dt>
-                        <dd>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix">
+                                <dt>C++</dt>
+                                <dd>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <em></em>
+                                    <em></em>
+                                    <em></em>
+                                    <em></em>
+                                    <em></em>
 
-                        </dd>
-                    </dl>
-					  <dl class="clearfix">
-							<dt>C#</dt>
-							<dd>
-								<b></b>
-								<b></b>
-								<b></b>
-								<b></b>
-								<b></b>
-								<b></b>
-								<b></b>
-								<em></em>
-								<em></em>
-							</dd>
-						</dl>
-						<dl class="clearfix">
-							<dt>Java</dt>
-							<dd>
-								<b></b>
-								<b></b>
-								<b></b>
-								<b></b>
-								<b></b>
-								<b></b>
-								<em></em>
-								<em></em>
-								<em></em>
-							</dd>
-						</dl>
-                        <dt>HTML<em>5</em> & CSS</dt>
-                        <dd>
-                            <b></b>
-                            <b></b>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix">
+                                <dt>C#</dt>
+                                <dd>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <em></em>
+                                    <em></em>
+                                </dd>
+                            </dl>
+                            <dl class="clearfix">
+                                <dt>Java</dt>
+                                <dd>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <em></em>
+                                    <em></em>
+                                    <em></em>
+                                </dd>
+                            </dl>
+                            <dt>HTML<em>5</em> & CSS</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
 
-                        </dd>
-                    </dl>
-					<dl class="clearfix">
-                        <dt>Go</dt>
-                        <dd>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>Go</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
 
-                        </dd>
-                    </dl>
-                    <dl class="clearfix">
-                        <dt>Javascript</dt>
-                        <dd>
-                            <b></b>
-                            <b></b>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>Javascript</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
 
-                        </dd>
-                    </dl>
-                  
-                                
-                    <dl class="clearfix mt20">
-                        <dt>
-                            <h6><i aria-hidden="true" data-icon="&#xe00b;"></i>Platform
-                            </h6>
-                        </dt>
-                        <dd></dd>
-                    </dl>                  
-                    <dl class="clearfix">
-                        <dt>ASP.Net MVC</dt>
-                        <dd>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
+                            </dd>
+                        </dl>
 
-                        </dd>
-                    </dl>
-                    <dl class="clearfix">
-                        <dt>UEFI(Bios)</dt>
-                        <dd>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
 
-                        </dd>
-                    </dl>
-                    <dl class="clearfix">
-                        <dt>OpenCV</dt>
-                        <dd>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
+                        <dl class="clearfix mt20">
+                            <dt>
+                                <h6><i aria-hidden="true" data-icon="&#xe00b;"></i>Platform
+                                </h6>
+                            </dt>
+                            <dd></dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>ASP.Net MVC</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
 
-                        </dd>
-                    </dl>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>UEFI(Bios)</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
 
-                    <dl class="clearfix">
-                        <dt>Embedded System</dt>
-                        <dd>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <b></b>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
-                            <em></em>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>OpenCV</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
 
-                        </dd>
-                    </dl>
+                            </dd>
+                        </dl>
 
+                        <dl class="clearfix">
+                            <dt>Embedded System</dt>
+                            <dd>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <b></b>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+                                <em></em>
+
+                            </dd>
+                        </dl>
+
+
+                    </div>
+
+                </div>
+
+                <div class="information clearfix">
+                    <div class="info_area  info_content">
+                        <h5 v-html="$t('work_experience_name')"></h5>
+                        <p class="mini_title" v-html="$t('work_experience1.title')"></p>
+                        <template v-for="intro of $t('work_experience1.intros')">
+                            <li class="tab"> {{intro}}</li>
+                        </template>
+                        <p class="mini_title" v-html="$t('work_experience2.title')"></p>
+                        <template v-for="intro of $t('work_experience2.intros')">
+                            <li class="tab"> {{intro}}</li>
+                        </template>
+                    </div>
+                </div>
+
+                <div class="information clearfix">
+                    <div class="info_area  info_content">
+                        <h5 v-html="$t('education_name')"></h5>
+                        <p class="mini_title" v-html="$t('education1.title')"></p>
+                        <template v-for="intro of $t('education1.intros')">
+                            <li class="tab"> {{intro}}</li>
+                        </template>
+                        <p class="mini_title" v-html="$t('education2.title')"></p>
+                        <template v-for="intro of $t('education2.intros')">
+                            <li class="tab"> {{intro}}</li>
+                        </template>
+                    </div>
+
+                </div>
+
+                <div class="information clearfix">
+                    <div class="info_area  info_content">
+                        <h5 v-html="$t('achievement')"></h5>
+                        <template v-for="achievement of $t('achievements')">
+                            <p> {{achievement.title}}<a v-html="achievement.html"></a></p>
+
+                        </template>
+                    </div>
 
                 </div>
 
             </div>
-
         </div>
-    </div>
 
 
 
-    <!--個人資訊-->
-    <div class="tip_avatar">
-        <a href="javascript:;" class="tip_close" aria-hidden="false" data-icon="&#x4d;"></a>
-        <div class="tip_avatar_con">
-            <div class="tip_right">
+        <!--個人資訊-->
+        <div class="tip_avatar">
+            <a href="javascript:;" class="tip_close" aria-hidden="false" data-icon="&#x4d;"></a>
+            <div class="tip_avatar_con">
+                <div class="tip_right">
 
-                <h2 v-html="$t('my_name')"></h2>
-                <p>1990/09/02</p>
-                <p>Man</p>
-                <p>174cm/58kg</p>
-                <h5 v-html="$t('education_name')"></h5>
-				<template v-for="intro of $t('education1.intros')">
-						<p class="tab"> {{intro}}</li>	
-				</template>	
-				<template v-for="intro of $t('education2.intros')">
-						<p class="tab"> {{intro}}</li>	
-				</template>	
-                
-                <h5 v-html="$t('work_experience_name')"></h5>
-                <p v-html="$t('work_experience1.title')"></p>
-				<p v-html="$t('work_experience2.title')"></p>
+                    <h2 v-html="$t('my_name')"></h2>
+                    <p>1990/09/02</p>
+                    <p>Man</p>
+                    <p>174cm/58kg</p>
+                    <h5 v-html="$t('education_name')"></h5>
+                    <template v-for="intro of $t('education1.intros')">
+                        <p class="tab"> {{intro}}</li>
+                    </template>
+                    <template v-for="intro of $t('education2.intros')">
+                        <p class="tab"> {{intro}}</li>
+                    </template>
+
+                    <h5 v-html="$t('work_experience_name')"></h5>
+                    <p v-html="$t('work_experience1.title')"></p>
+                    <p v-html="$t('work_experience2.title')"></p>
 
 
-                <p class="mt20" v-html="$t('contact')"></p>
-                <p><i aria-hidden="true" data-icon="&#xe010;"></i>hymen81@gmail.com</p>               
-                <p><i aria-hidden="true" data-icon="&#xe00b;"></i>0910086521</p>
+                    <p class="mt20" v-html="$t('contact')"></p>
+                    <p><i aria-hidden="true" data-icon="&#xe010;"></i>hymen81@gmail.com</p>
+                    <p><i aria-hidden="true" data-icon="&#xe00b;"></i>0910086521</p>
 
+                </div>
             </div>
         </div>
-    </div>
-    <div class="tip_avatar_bg"></div>
+        <div class="tip_avatar_bg"></div>
 
-    <!--作品內容-->
-    <div class="tip_product sd">
+        <!--作品內容-->
+        <div class="tip_product sd">
 
-        <!--關閉作品-->
-        <a href="javascript:;" class="r5 tip_area_close" aria-hidden="true" data-icon="&#x4d;"></a>
+            <!--關閉作品-->
+            <a href="javascript:;" class="r5 tip_area_close" aria-hidden="true" data-icon="&#x4d;"></a>
 
-        <div id="tip_carousel" class="carousel slide" data-ride="carousel">
+            <div id="tip_carousel" class="carousel slide" data-ride="carousel">
 
-            <!-- 作品 -->
-            <div class="carousel-inner">
-			
-			
-				<!--Find my car 8891-->
-                <div class="item active">
+                <!-- 作品 -->
+                <div class="carousel-inner">
 
-            
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe0e6;"></i>中古車小幫手</h3>                       
-                        <p><a href="" target="_blank" class=" r5">原始碼(Github)</a></p>
-						<p>預算有限買不起新車  於是動起買新古車的念頭  喜歡的車款有:CX-5, Eclipse Cross, XV....  最後買到了不到一年的原廠車 省了大概20萬左右</p>				
 
-                        <p>使用Go語言開發 及時從8891獲取最新上架中古車的backend service, 再透過Line chatbot來及時通知我有什麼好貨色</p>
-						<p class="pic">
-                            <img src="images/mycar_01.jpg" alt="" />
-                            <span>Chatbot截圖</span>
-                        </p>      
-						<p class="pic">
-                            <img src="images/mycar_02.jpg" alt="" />
-                            <span>交車</span>
-                        </p>      
-                    </div>
-                </div>
-				
-				<!--kinesis chatbot-->
-                <div class="item">       
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe0e6;"></i>AWS Kinesis Viewer</h3>                                             
-						<p>不同module之間都透過kinesis的event來溝通，所以開發一個大家都可以用的debug工具來觀察payload</p>				
+                    <!--Find my car 8891-->
+                    <div class="item active">
 
-                        <p>使用C#+web socket開發 UI網頁用vue,所以基本上是同步顯示kinesis該stream的內容</p>
-						<p class="pic">
-                            <img src="images/kinesis_01.jpg" alt="" />
-                            <span>截圖</span>
-                        </p>      						   
-                    </div>
-                </div>
-				
-				
-				<!--draw chatbot-->
-                <div class="item">       
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe0e6;"></i>抽抽聊天機器人</h3>                       
-                        <p><a href="https://github.com/hymen81/ACGMKun_LineBot" target="_blank" class=" r5">原始碼(Github)</a></p>
-						<p>可以抽圖跟機器人聊天，也可以抽髒圖</p>				
 
-                        <p>使用nodeJS開發的backend service, Server使用免費的heroku搭配本身提供的CI/CD功能</p>
-						<p class="pic">
-                            <img src="images/draw_01.jpg" alt="" />
-                            <span>Chatbot截圖</span>
-                        </p>      						   
-                    </div>
-                </div>
-			
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.usedCarHelper.title')"></h3>
+                            <p><a href="" target="_blank" class=" r5">Source Code (Github)</a></p>
+                            <p>預算有限買不起新車 於是動起買新古車的念頭 喜歡的車款有:CX-5, Eclipse Cross, XV.... 最後買到了不到一年的原廠車 省了大概20萬左右</p>
+                            <p>使用Go語言開發 及時從8891獲取最新上架中古車的backend service, 再透過Line chatbot來及時通知我有什麼好貨色</p>
 
-                <!--CLHY-->
-                <div class="item">
+                            <p>I have no enough budget to buy a new car. Therefore, I change my mind to search for a used car. There are many models in the pocket:CX-5, Eclipse Cross, XV....</p>
+                            <p>Saving so much money and get a nearly new car :D</p>
+                            <p>Using Go lang to develop, query 8891 API to get car list on the market, and integrate the LineBot API to show me what car is already hit the store shelves.</p>
 
-                    <div class="banner product_h1">
-
-                        <div class="banner_bg"></div>
-                    </div>
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe0e6;"></i>黑客松比賽-魚群辨識<a href="http://www.accupass.com/go/fishackathontpe2016"
-                                target="_blank" class="btn_green r5">官方網站</a></h3>
-                        <p>
-                            第一次參加黑客松比賽，一連三天在光華三創園區，主題是海洋永續發展</p>
-                        
-                        <p><a href="https://github.com/xiuwenliu/FiCoMaL" target="_blank" class=" r5">原始碼(Github)</a></p>
-
-                        <p>我們開發出一套魚種辨識系統 可以自動辨識魚種且過磅測量魚的重量，最後自動上傳到web server做分析統計與資料呈現</p>
-
-                        <p class="pic">
-                            <img src="images/clhy_01.jpg" alt="" />
-                            <span>季軍</span>
-                        </p>
-
-                        <p class="pic">
-                            <img src="images/clhy_02.jpg" alt="" />
-                            <span>透過攝影機即時拍攝即時辨識魚種，以及透過感測器取得重量</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/clhy_03.jpg" alt="" />
-                            <span>透過網路上傳雲端儲存，使用者可利用任何可上網裝置進行瀏覽</span>
-                        </p>
-                        <p class="pic">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/_siETdwqsM8" frameborder="0" allowfullscreen></iframe>
-                            <span>Demo影片</span>
-                        </p>
-
-                        <div class="time">
-                            <em>2016</em>年<em>4</em>月<b>-</b><em>2016</em>年<em>4</em>月
+                            <p class="pic">
+                                <img src="images/mycar_01.jpg" alt="" />
+                                <span>Chatbot截圖 / Snapshot of chatbot</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/mycar_02.jpg" alt="" />
+                                <span>交車 / Delivery</span>
+                            </p>
                         </div>
                     </div>
 
-                </div>
+                    <!--kinesis chatbot-->
+                    <div class="item">
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.kinesisViewer.title')"></h3>
+                            <p>不同module之間都透過kinesis的event來溝通，所以開發一個大家都可以用的debug工具來觀察payload</p>
+                            <p>使用C#+web socket開發 UI網頁用vue,所以基本上是同步顯示kinesis裡面該stream內的每筆records</p>
 
-                <!--馬場預約系統-->
-                <div class="item">
-
-
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe0e6;"></i>馬場預約系統</h3>
-                        <p>
-                            兼差做的訂單管理網頁 使用Asp.Net MVC Server平台使用微軟Azure</p>
-
-                        <p class="pic">
-                            <img src="images/book_01.jpg" alt="" />
-                            <span>登入介面</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/book_02.jpg" alt="" />
-                            <span>當周預約行事曆總表</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/book_03.jpg" alt="" />
-                            <span>新增訂單-首先查詢顧客，可以利用名字或是電話</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/book_04.jpg" alt="" />
-                            <span>新增訂單-訂單選項</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/book_05.jpg" alt="" />
-                            <span>其他管理介面</span>
-                        </p>
-
-                        <div class="time">
-                            <em>2016</em>年<em>3</em>月<b>-</b>持續中
+                            <p>We use event-driven architecture to communicate between many systems/modules and choose AWS Kinesis as ingestion</p>
+                            <p>So that I developed a debug tool to see what content we sent from the event</p>
+                            <p>Using C# and web socket, web UI is based on VueJS</p>
+                            <p class="pic">
+                                <img src="images/kinesis_01.jpg" alt="" />
+                                <span>截圖 / Snapshot</span>
+                            </p>
                         </div>
                     </div>
 
-                </div>
 
-                <!--JP TO CH-->
-                <div class="item">
+                    <!--draw chatbot-->
+                    <div class="item">
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.drawBot.title')"></h3>
+                            <p><a href="https://github.com/hymen81/ACGMKun_LineBot" target="_blank"
+                                    class=" r5">Source Code (Github)</a></p>
+                            <p>可以抽圖跟機器人聊天，也可以抽髒圖</p>
+                            <p>使用nodeJS開發的backend service, Server使用免費的heroku搭配本身提供的CI/CD功能</p>
+
+                            <p>We can draw a picture randomly</p>
+                            <p>Using nodeJS to develop the backend and using Heorku as server that can run my service, Heroku also provides CI/CD features.</p>
+                            <p class="pic">
+                                <img src="images/draw_01.jpg" alt="" />
+                                <span>Chatbot截圖 / Snapshot of chatbot</span>
+                            </p>
+                        </div>
+                    </div>
 
 
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe013;"></i>日文輸入法打中文小工具<a href=" http://jptoch-bl.herokuapp.com/"
-                                target="_blank" class="btn_green r5">點我參觀</a></h3>
-                        <p><a href="https://github.com/hymen81/JpInputToChineseConverter" target="_blank" class=" r5">原始碼(Github)</a></p>
-                        <p>在玩3DS的時候跟朋友組隊想要打中文，結果只有日文輸入法，於是我想到可以寫一個爬日文字典網頁的小工具，去幫我們快速查出要打那些平假名可以組合成中文。</p>
-                        <p class="pic">
-                            <img src="images/jp_to_ch1.jpg" alt="" />
-                            <span>打開3DS的輸入法</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/jp_to_ch2.jpg" alt="" />
-                            <span>輸入網頁上的日文假名</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/jp_to_ch3.jpg" alt="" />
-                            <span>成功顯示中文</span>
-                        </p>
+                    <!--CLHY-->
+                    <div class="item">
+
+                        <div class="banner product_h1">
+
+                            <div class="banner_bg"></div>
+                        </div>
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.fishRecognition.title')"></h3>
+                            <p>
+                                第一次參加黑客松比賽，一連三天在光華三創園區，主題是海洋永續發展</p>
+
+                            <p><a href="https://github.com/xiuwenliu/FiCoMaL" target="_blank"
+                                    class=" r5">Source Code (Github)</a></p>
+
+                            <p>我們開發出一套魚種辨識系統 可以自動辨識魚種且過磅測量魚的重量，最後自動上傳到web server做分析統計與資料呈現</p>
+
+                            <p>It's my first time to attend this event, total of 3 days, the topic is "sustainable ocean"</p>
+                            <p>We figure out a solution that is the fish recognition system</p>
+                            <p>To recognize fish, to classify fish, to estimate the weight of a fish, to upload data to the server, to show the dashboard</p>
+
+                            <p class="pic">
+                                <img src="images/clhy_01.jpg" alt="" />
+                                <span>季軍 / Third Prize</span>
+                            </p>
+
+                            <p class="pic">
+                                <img src="images/clhy_02.jpg" alt="" />
+                                <span>透過攝影機即時拍攝即時辨識魚種，以及透過感測器取得重量</span>
+                                <span>Using a camera to capture an image and recognize it and get weight by the sensor</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/clhy_03.jpg" alt="" />
+                                <span>透過網路上傳雲端儲存，使用者可利用任何可上網裝置進行瀏覽</span>
+                                <span>Upload fish data to our server, user can use any type of device to watch that</span>
+                            </p>
+                            <p class="pic">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/_siETdwqsM8"
+                                    frameborder="0" allowfullscreen></iframe>
+                                <span>Demo影片</span>
+                                <span>Demo Video</span>
+                            </p>
+
+                           
+                        </div>
 
                     </div>
 
-                </div>
-
-                <!--WebAPI-->
-                <div class="item">
+                    <!--馬場預約系統-->
+                    <div class="item">
 
 
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe108;"></i>搜尋引擎WebAPI</h3>
-                        <p>幫忙別人的圖書館網頁專案開發的小module，工作是把搜尋引擎的library(龍捲風科技與Luecne.Net)利用ASP.Net的WebAPI方式包一層，透過Json傳遞的方式給Font-End使用，另外還額外做了DEMO來展示WebAPI</p>
-                        <p class="pic">
-                            <img src="images/webapi1.jpg" alt="" />
-                            <span>API Demo</span>
-                        </p>
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.horseReservation.title')"></h3>
+                            <p>兼差做的訂單管理網頁 使用Asp.Net MVC Server平台使用微軟Azure</p>
+                            <p>It's a reservation system from one of my part-time jobs, I made it by Asp.Net MVC + Azure</p>
 
-                    </div>
+                            <p class="pic">
+                                <img src="images/book_01.jpg" alt="" />
+                                <span>登入介面</span>
+                                <span>LogIn Page</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/book_02.jpg" alt="" />
+                                <span>當周預約行事曆總表</span>
+                                <span>Weekly reserved summary</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/book_03.jpg" alt="" />
+                                <span>新增訂單-首先查詢顧客，可以利用名字或是電話</span>
+                                <span>Query customer before creating an order</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/book_04.jpg" alt="" />
+                                <span>新增訂單-訂單選項</span>
+                                <span>Creating order</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/book_05.jpg" alt="" />
+                                <span>其他管理介面</span>
+                                <span>Other pages</span>
+                            </p>
 
-                </div>
-
-                <!--RealSense-->
-                <div class="item">
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe108;"></i>RealSense SDK開發 – 解鎖App</h3>
-                        <p>公司內部高層的想法，我把它實做出來，就是模擬解鎖的APP，用Intel 3d camera的SDK，SDK會給我手指關節的資訊，我把它串到我的APP上面，APP的功能就是手機的解鎖。</p>
-                        <p class="pic">
-                            <img src="images/real_01.jpg" alt="" />
-                            <span>截圖</span>
-                        </p>
-
-
-                    </div>
-
-                </div>
-
-                <!--realsense tool-->
-                <div class="item">
-
-
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe108;"></i>3D Camera Testing tool</h3>
-                        <p>測量camera的精準度，用它算出來的位移量跟實際用尺算出來位移量的做比較。</p>
-
-                        <p class="pic">
-                            <img src="images/3d_tool_01.jpg" alt="" />
-                            <span>Tool介面</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/3d_tool_02.jpg" alt="" />
-                            <span>實體</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/3d_tool_03.jpg" alt="" />
-                            <span>計算準確度</span>
-                        </p>
+                            
+                        </div>
 
                     </div>
 
-                </div>
-
-                <!--rails-->
-                <div class="item">
-
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe108;"></i>我的鐵路自動通知App</h3>
-                        <p><a href="https://github.com/hymen81/MyRailWayNotify" target="_blank" class=" r5">原始碼(Github)</a></p>
-                        <p>有一段時間在做案子，每天可能10點多才會下班，因為火車時間錯過一班就要等很久，因此我開發了一個APP來提醒我最近一班的火車時間，這樣我就可以決定要用跑的，還是慢慢收拾走去火車站，原理很簡單，我去對時刻表網頁http://twtraffic.tra.gov.tw/twrail/，丟參數進行GET抓回一堆html原始碼進行解析，因為我沒有使用第三方library(XML
-                            parser)， 所以我手動用字串處理來把資料抽出來，
-                        </p>
-
-                        <p class="pic">
-                            <img src="images/myRail_01.jpg" alt="" />
-                            <span>介面</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/myRail_02.jpg" alt="" />
-                            <span>介面</span>
-                        </p>
+                    <!--JP TO CH-->
+                    <div class="item">
 
 
-                    </div>
-                </div>
-                <!---->
-                <div class="item">
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.jpInputToChinese.title')"></h3>
+                            <p><a href="https://github.com/hymen81/JpInputToChineseConverter" target="_blank"
+                                    class=" r5">Source Code (Github)</a></p>
+                            <p>在玩3DS的時候跟朋友組隊想要打中文，結果只有日文輸入法，於是我想到可以寫一個爬日文字典網頁的小工具，去幫我們快速查出要打那些平假名可以組合成中文。</p>
+                            <p>When I was playing a game in 3DS, for group chat that I needed to type chinese, but 3DS system offers Japanese-Input only.</p>
+                            <p>Therefore, I made a service to type chinese words and the service will show how to construct chinese by hiragana chars.</p>
+                            <p class="pic">
+                                <img src="images/jp_to_ch1.jpg" alt="" />
+                                <span>打開3DS的輸入法</span>
+                                <span>Opening keyboard of 3DS</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/jp_to_ch2.jpg" alt="" />
+                                <span>輸入網頁上的日文假名</span>
+                                <span>Typing hiragana chars</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/jp_to_ch3.jpg" alt="" />
+                                <span>成功顯示中文</span>
+                                <span>Chinese will be indicated</span>
+                            </p>
 
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe108;"></i>公司打卡小工具</h3>
-                        <p><a href="https://github.com/hymen81/AutoKimaiHelper" target="_blank" class=" r5">原始碼(Github)</a></p>
-                        <p>我是個懶惰的人，公司需要每天打卡紀錄做哪些專案，沒打會被系統寄信，所以我花費比打卡多好幾倍的時間來開發打卡幫手，一次填一個月分XD；公司打卡的網頁不太嚴謹，沒有防機器人的code，1秒內post幾百筆資料還照單全收，用wireshark觀察一下就發現不難實作。</p>
-
-                        <p class="pic">
-                            <img src="images/card_01.jpg" alt="" />
-                            <span>beta版</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/card_02.jpg" alt="" />
-                            <span>實際的版本</span>
-                        </p>
-
+                        </div>
 
                     </div>
-                </div>
-                <!---->
-                <div class="item">
 
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe0e6;"></i>UEFI - BIOS遊戲框架</h3>
-                        <p><a href="https://github.com/hymen81/UEFI-Game-FlappyBirdy" target="_blank" class=" r5">原始碼(Github)</a></p>
-                        <p>在UEFI-BIOS中 手工刻了一個迷你遊戲框架。太高深的圖像演算法不好弄，只有定點數可以使用。</p>
+                    <!--WebAPI-->
+                    <div class="item">
 
-                        <p class="pic">
-                            <img src="images/bios_game_01.jpg" alt="" />
-                            <span>在UEFI BIOS底下實作Flappy bird</span>
-                        </p>
-                        <p class="pic">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yXY8p9hGgho" frameborder="0" allowfullscreen></iframe>
-                        </p>
 
-                        <p class="pic">
-                            <img src="images/bios_game_02.jpg" alt="" />
-                            <span>Bonus在bios底下實作快打旋風</span>
-                        </p>
-                        <p class="pic">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/GYTGvVmhEJM" frameborder="0" allowfullscreen></iframe>
-                        </p>
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.luceneAPI.title')"></h3>
+                            <p>把搜尋引擎的library(龍捲風科技與Luecne.Net)利用ASP.Net的WebAPI方式包一層，透過Json傳遞的方式給Font-End使用，另外還額外做了DEMO來展示WebAPI
+                            </p>
+                            <p>It's a C# library that was wrapped by Luecne.Net, and this library makes a caller who uses the searching engine features easier.
+                            </p>
+                            <p>I also provide a demo page to indicate features.
+                            </p>
+                            <p class="pic">
+                                <img src="images/webapi1.jpg" alt="" />
+                                <span>API Demo</span>
+                            </p>
 
+                        </div>
 
                     </div>
-                </div>
-                <!---->
-                <div class="item">
 
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe108;"></i>自動貓咪餵食器</h3>
-                        <p>架構上就是用Arduino＋ethernet(網路模組) + servo(馬達) + RFID + weight sensor(重量感測器)來做一個餵食機，餵食機可以連上網際網路，也就是我架好的server，它會一直去polling
-                            server，根據server給它的資訊去做行為，也會一直更新server的資料。用RFID辨識正在吃飼料的寵物，重量感測器回報目前飼料的剩餘量。 手機app端也去向server要資料與設定資料這樣。
-                        </p>
+                    <!--RealSense-->
+                    <div class="item">
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.realSense.title')"></h3>
+                            <p>前公司老闆的idea，我負責把它實做出來，就是模擬解鎖的APP，用Intel 3d
+                                camera的SDK，SDK會給我手指關節的資訊，把它串到我的APP上面，APP的功能就是手機的解鎖。</p>
+                            <p>This app is the same as unlock screen on the smartphone, but it's running on PC.
+                                I made it by RealSense SDK that is provided by Intel </p>
+                            <p class="pic">
+                                <img src="images/real_01.jpg" alt="" />
+                                <span>截圖</span>
+                                <span>Snapshot</span>
+                            </p>
 
-                        <p class="pic">
-                            <img src="images/cat_01.jpg" alt="" />
-                            <span>架構</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/cat_02.jpg" alt="" />
-                            <span>設計圖</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/cat_03.jpg" alt="" />
-                            <span>遠端App畫面</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/cat_04.jpg" alt="" />
-                            <span>實機圖</span>
-                        </p>
-                        <p class="pic">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/1tJyp-uOn-Y" frameborder="0" allowfullscreen></iframe>
-                        </p>
-                    </div>
-                </div>
-                <!---->
-                <div class="item">
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe108;"></i>Win7 preload tool</h3>
-                        <p>Intel最新的CPU不內建USB2.0的控制器，可是win7只內建USB2.0控制器的driver，所以你灌了win7就發現什麼USB裝置都不能用；解決之道就是BIOS開發一個tool，tool切一個partition裡面塞入USB3.0的控制器driver，安裝win7時再把它載入即可。
-                            簡單說就是開發UEFI BIOS的tool，用C語言刻UI，看demo影片
-                        </p>
 
-                        <p class="pic">
-                            <img src="images/win7Tool_01.jpg" alt="" />
-                            <span>Tool介面</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/win7Tool_02.jpg" alt="" />
-                            <span>Tool介面V2</span>
-                        </p>
-                        <p>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/XOP7DwrsjkE" frameborder="0" allowfullscreen></iframe>
-                        </p>
+                        </div>
 
                     </div>
-                </div>
-                <!---->
-                <div class="item">
 
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe108;"></i>求婚驚喜小遊戲</h3>
-                        <p><a href="https://github.com/hymen81/Iswear_Game" target="_blank" class=" r5">原始碼(Github)</a></p>
-                        <p>最近有認識的人想求婚，之前在網路上看到有工程師寫遊戲給女友玩，破關之後就是求婚的訊息，我也想做一個類似的，剛好學習新的cocos2d引擎還有複習C++與design pattern，美術自己當，且尚未完成。</p>
-
-                        <p class="pic">
-                            <img src="images/swear_01.jpg" alt="" />
-                            <span>遊戲畫面1</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/swear_02.jpg" alt="" />
-                            <span>遊戲畫面2</span>
-                        </p>
+                    <!--realsense tool-->
+                    <div class="item">
 
 
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.threeDCamera.title')"></h3>
+                            <p>測量camera的精準度，用它算出來的位移量跟實際用尺算出來位移量的做比較。</p>
+                            <p>To measure how is the camera's accuracy.</p>
 
-                    </div>
-                </div>
-                <!---->
-                <!---->
-                <div class="item">
+                            <p class="pic">
+                                <img src="images/3d_tool_01.jpg" alt="" />
+                                <span>Tool介面</span>
+                                <span>Tool's UI'</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/3d_tool_02.jpg" alt="" />
+                                <span>實體</span>
+                                <span>Instance</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/3d_tool_03.jpg" alt="" />
+                                <span>計算準確度</span>
+                                <span>Caculating the accuracy</span>
+                            </p>
 
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe108;"></i>達美樂定Pizza API</h3>
-                        <p>智慧語音助理的其中一個功能:訂披薩。</p>
-                        <p>我幫忙去分析達美樂官網的定Pizza系統Http封包，並且幫忙製作成API讓外部可以直接呼API來線上定披薩。</p>
-
-
-                        <p class="pic">
-                            <img src="images/pizza_01.jpg" alt="" />
-                            <span>用Chrome分析</span>
-                        </p>
-                        <p class="pic">
-                            <img src="images/pizza_02.jpg" alt="" />
-                            <span>API Demo App</span>
-                        </p>
-
-
+                        </div>
 
                     </div>
-                </div>
-                <!---->
 
-                <!--遙控車-->
-                <div class="item">
+                    <!--rails-->
+                    <div class="item">
 
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe108;"></i>聲控遙控車</h3>
-                        <p>利用Android內建的語音辨識功能，辨識出前進左右的指令，透過wifi傳遞至遙控車上的arduino板子，接收到命令後的arduino再去控制遙控車</p>
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.myRailWayNotifier.title')"></h3>
+                            <p><a href="https://github.com/hymen81/MyRailWayNotify" target="_blank"
+                                    class=" r5">SourceCode(Github)</a></p>
+                            <p>有一段時間在做案子，每天可能10點多才會下班，因為火車時間錯過一班就要等很久，因此我開發了一個APP來提醒我最近一班的火車時間，這樣我就可以決定要用跑的，還是慢慢收拾走去火車站，原理很簡單，我去對時刻表網頁http://twtraffic.tra.gov.tw/twrail/，丟參數進行GET抓回一堆html原始碼進行解析，因為我沒有使用第三方library(XML
+                                parser)， 所以我手動用字串處理來把資料抽出來</p>
+                            <p>I have worked overtime in the past, When I missed the train, it will take lots of time to wait for the next one.</p>
+                            <p>So I made an app to notify me what time is the next train arrive time.</p>
+                            <p>According to this time, I can make a decision to go station ASAP or walk slowly.</p>
 
-                        <p class="pic">
-                            <img src="images/speech.jpg" alt="" />
-                            <span>整體架構圖與成品</span>
-                        </p>
-                     
+                            <p class="pic">
+                                <img src="images/myRail_01.jpg" alt="" />
+                                <span>介面</span>
+                                <span>Interface</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/myRail_02.jpg" alt="" />
+                                <span>介面</span>
+                                <span>Interface</span>
+                            </p>
+
+
+                        </div>
                     </div>
-                </div>
-                <!---->
+                    <!---->
+                    <div class="item">
 
-                <!--更多作品-->
-                <div class="item">
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.autoPunchIn.title')"></h3>
+                            <p><a href="https://github.com/hymen81/AutoKimaiHelper" target="_blank"
+                                    class=" r5">SourceCode(Github)</a></p>
+                            <p>我是個懶惰的人，公司需要每天打卡紀錄做哪些專案，沒打會被系統寄信，所以我花費比打卡多好幾倍的時間來開發打卡幫手，一次填一個月分XD；公司打卡的網頁不太嚴謹，沒有防機器人的code，1秒內post幾百筆資料還照單全收，用wireshark觀察一下就發現不難實作。</p>
+                            <p>I'm a lazy person, we need to punch in every day, If we didn't, the system will send a mail to your boss... and boss will highlight us to fill the attended record.</p>
+                            <p>So I made an app to fill all of the attended records which are missed.</p>
 
-                    <div class="banner product_h6">
-                        <div class="logo r5">More</div>
-                        <div class="banner_bg"></div>
+                            <p class="pic">
+                                <img src="images/card_01.jpg" alt="" />
+                                <span>beta版</span>
+                                <span>Beta ver.</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/card_02.jpg" alt="" />
+                                <span>實際的版本</span>
+                                <span>Prod ver.</span>
+                            </p>
+
+
+                        </div>
                     </div>
-                    <div class="descprition">
-                        <h3><i aria-hidden="true" data-icon="&#xe0e8;"></i>更多作品</h3>
-                        <a href="https://drive.google.com/file/d/0Bz7RR3lVHoLnRTR6UjJLenJzc0E/view?usp=sharing">
-                            <p>此網頁只展示部分作品 更多我的作品(包含學生時期)請點我觀看</p>
-                        </a>
+                    <!---->
+                    <div class="item">
+
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.biosGame.title')"></h3>
+                            <p><a href="https://github.com/hymen81/UEFI-Game-FlappyBirdy" target="_blank"
+                                    class=" r5">SourceCode(Github)</a></p>
+                            <p>在UEFI-BIOS中 手工刻了一個迷你遊戲框架。太高深的圖像演算法不好弄，只有定點數可以使用。</p>
+                            <p>I made a game framework under UEFI-BIOS, some graphic algorithms are too difficult to implement, because of fixed-point</p>
+
+                            <p class="pic">
+                                <img src="images/bios_game_01.jpg" alt="" />
+                                <span>在UEFI BIOS底下實作Flappy bird</span>
+                                <span>Flappy Bird that base on UEFI</span>
+                            </p>
+                            <p class="pic">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/yXY8p9hGgho"
+                                    frameborder="0" allowfullscreen></iframe>
+                            </p>
+
+                            <p class="pic">
+                                <img src="images/bios_game_02.jpg" alt="" />
+                                <span>在bios底下實作快打旋風</span>
+                                <span>Street Fighter :D</span>
+                            </p>
+                            <p class="pic">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/GYTGvVmhEJM"
+                                    frameborder="0" allowfullscreen></iframe>
+                            </p>
+
+
+                        </div>
                     </div>
+                    <!---->
+                    <div class="item">
+
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.catFeeding.title')"></h3>
+                            <p>架構上就是用Arduino＋ethernet(網路模組) + servo(馬達) + RFID + weight
+                                sensor(重量感測器)來做一個餵食機，餵食機可以連上網際網路，也就是我架好的server，它會一直去polling
+                                server，根據server給它的資訊去做行為，也會一直更新server的資料。用RFID辨識正在吃飼料的寵物，重量感測器回報目前飼料的剩餘量。
+                                手機app端也去向server要資料與設定資料這樣。</p>
+                            <p>Basiclly, I use Arduino, ethernet module, servo module, RFID and weighr sensor to make a feeder</p>
+
+                            <p class="pic">
+                                <img src="images/cat_01.jpg" alt="" />
+                                <span>架構</span>
+                                <span>architecture</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/cat_02.jpg" alt="" />
+                                <span>設計圖</span>
+                                <span>design</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/cat_03.jpg" alt="" />
+                                <span>遠端App畫面</span>
+                                <span>snapshot of app</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/cat_04.jpg" alt="" />
+                                <span>實機圖</span>
+                                <span>demo</span>
+                            </p>
+                            <p class="pic">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/1tJyp-uOn-Y"
+                                    frameborder="0" allowfullscreen></iframe>
+                            </p>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="item">
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.uefiGUITool.title')"></h3>
+                            <p>Intel最新的CPU不內建USB2.0的控制器，可是win7只內建USB2.0控制器的driver，所以你灌了win7就發現什麼USB裝置都不能用；解決之道就是BIOS開發一個tool，tool切一個partition裡面塞入USB3.0的控制器driver，安裝win7時再把它載入即可。
+                                簡單說就是開發UEFI BIOS的tool，用C語言刻UI，看demo影片
+                            </p>
+                            <p>The newest Intel CPU that does not support USB2.0 driver, but for Win7 there is only built-in USB2.0 driver.
+                                If you install Win7 under these kinds of CPU, you can't use any USB devices.
+                            </p>
+                            <p>The solution is to develop a bios tool to put USB3.0 driver into disk before you install Win7.
+                            </p>
+
+                            <p class="pic">
+                                <img src="images/win7Tool_01.jpg" alt="" />
+                                <span>Tool介面</span>
+                                <span>Tool's interface'</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/win7Tool_02.jpg" alt="" />
+                                <span>Tool介面V2</span>
+                                <span>Tool's interface version 2'</span>
+                            </p>
+                            <p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/XOP7DwrsjkE"
+                                    frameborder="0" allowfullscreen></iframe>
+                            </p>
+
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="item">
+
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.iSwearGame.title')"></h3>
+                            <p><a href="https://github.com/hymen81/Iswear_Game" target="_blank"
+                                    class=" r5">Source Code(Github)</a></p>
+                            <p>最近有認識的人想求婚，之前在網路上看到有工程師寫遊戲給女友玩，破關之後就是求婚的訊息，我也想做一個類似的，剛好學習新的cocos2d引擎還有複習C++與design
+                                pattern，美術自己當，且尚未完成。</p>
+
+                            <p>It's game I developed by cocos2D & C++, The game that is used in popping the question.</p>
+                            <p>Girl who will be proposed but she must play this game first, and when she finishing the game, the screen will pop out a message: "Did you wanna marry me?".</p>
+
+                            <p class="pic">
+                                <img src="images/swear_01.jpg" alt="" />
+                                <span>遊戲畫面1</span>
+                                <span>snapshot of game 1</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/swear_02.jpg" alt="" />
+                                <span>遊戲畫面2</span>
+                                <span>snapshot of game 2</span>
+                            </p>
+
+
+
+                        </div>
+                    </div>
+                    <!---->
+                    <!---->
+                    <div class="item">
+
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.dominosAPI.title')"></h3>
+                            <p>智慧語音助理的其中一個功能:訂披薩。</p>
+                            
+                            <p>我幫忙去分析達美樂官網的定Pizza系統Http封包，並且幫忙製作成API讓外部可以直接呼API來線上定披薩。</p>
+
+                            <p>We developed a voice assistant of which one of functions is order a pizzea.</p>
+                            <p>I helped to analyze the domino's' ordering system and wrapped it into the API.</p>
+                            <p>We can invoke these APIs to order pizza easily.</p>
+
+
+                            <p class="pic">
+                                <img src="images/pizza_01.jpg" alt="" />
+                                <span>用Chrome分析</span>
+                                <span>Analyze the behavior</span>
+                            </p>
+                            <p class="pic">
+                                <img src="images/pizza_02.jpg" alt="" />
+                                <span>API Demo App</span>
+                            </p>
+
+
+
+                        </div>
+                    </div>
+                    <!---->
+
+                    <!--遙控車-->
+                    <div class="item">
+
+                        <div class="descprition">
+                            <h3 v-html="$t('portfolioMap.voiceRCCar.title')"></h3>
+                            <p>利用Android內建的語音辨識功能，辨識出前進左右的指令，透過wifi傳遞至遙控車上的arduino板子，接收到命令後的arduino再去控制遙控車</p>
+                            <p>Using voice recognition to fidget out what command we sent, and passed commands to arduino board.</p>
+                            <p>The RC car will be controlled by arduino.</p>
+                            <p class="pic">
+                                <img src="images/speech.jpg" alt="" />
+                                <span>整體架構圖與成品</span>
+                                <span>Architecture & Product</span>
+                            </p>
+
+                        </div>
+                    </div>
+                    <!---->
+
+                    <!--更多作品-->
+                    <div class="item">
+
+                        <div class="banner product_h6">
+                            <div class="logo r5">More</div>
+                            <div class="banner_bg"></div>
+                        </div>
+                        <div class="descprition">
+                            <h3><i aria-hidden="true" data-icon="&#xe0e8;"></i>更多作品 More Portfolios</h3>
+                            <a href="https://drive.google.com/file/d/0Bz7RR3lVHoLnRTR6UjJLenJzc0E/view?usp=sharing">
+                                <p>此網頁只展示部分作品 更多我的作品(包含學生時期)請點我觀看</p>
+                                <p>More portfolios in this link (Chinese Only).</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+
 
                 </div>
 
-
-
-            </div>
-
-            <!-- 左右控制 -->
-            <a class="carousel-control left" href="#tip_carousel" data-slide="prev">
+                <!-- 左右控制 -->
+                <a class="carousel-control left" href="#tip_carousel" data-slide="prev">
                     <i aria-hidden="true" data-icon="&#x34;"></i>
                 </a>
-            <a class="carousel-control right" href="#tip_carousel" data-slide="next">
+                <a class="carousel-control right" href="#tip_carousel" data-slide="next">
                     <i aria-hidden="true" data-icon="&#x35;"></i>
                 </a>
 
+            </div>
+
+
         </div>
 
-
-    </div>
-
-    <!--<div class="footer clearfix">
+        <!--<div class="footer clearfix">
         Template By LDuo
         <a href="https://github.com/lduo/resume" target="_blank">本履歷使用此作者樣板  連結至作者原始碼</a>
-    </div>-->
+        </div>-->
 
-    <div class="bye"><span>888811111</span></div>
-    <!--Jquery 2.1-->
-    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/jQuery.print.js"></script>
-    <script type="text/javascript" src="js/jquery.transit.min.js"></script>    
-    <script type="text/javascript" src="js/carousel.min.js"></script>
-    <!--jquery annyang sound control-->
-    <script type="text/javascript" src="js/annyang.min.js"></script>
-    <!--jquery loadding-->
-    <script type="text/javascript" src="js/pace.min.js"></script>
-    
-	<script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
-	<script type="text/javascript" src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
-	<script type="text/javascript" src="js/i18n.js"></script>
-    <script type="text/javascript" src="js/common.js"></script>
+        <div class="bye"><span>888811111</span></div>
+        <!--Jquery 2.1-->
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/jQuery.print.js"></script>
+        <script type="text/javascript" src="js/jquery.transit.min.js"></script>
+        <script type="text/javascript" src="js/carousel.min.js"></script>
+        <!--jquery annyang sound control-->
+        <script type="text/javascript" src="js/annyang.min.js"></script>
+        <!--jquery loadding-->
+        <script type="text/javascript" src="js/pace.min.js"></script>
 
+        <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
+        <script type="text/javascript" src="js/i18n.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+    </div>
 </body>
 
 </html>
