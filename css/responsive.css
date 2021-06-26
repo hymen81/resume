@@ -30,7 +30,7 @@
     .info_content ul li .btn_go { height: 30px; line-height: 30px; padding: 0 5px 0 10px; position: absolute; right: 10px; top: 5px; font-weight: normal; }
      .info_content ul li:hover .btn_go { display: block; }
 @media only screen and (min-width: 800px){	
-   .info_content ul li .btn_go { display: none; }
+   .info_content ul li .btn_go {/* display: none;*/ }
 	
 	
 
