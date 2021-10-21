@@ -190,7 +190,7 @@ const messages = {
 	achievement: '成就',
 	achievements: [{title:'最佳員工 at Trend Micro',html:""},
 	{title:'趨勢ai contest前10名',html:""},
-	{title:'黑客松比賽帶三名',html:""},
+	{title:'黑客松比賽第三名',html:""},
 	{title:'LOL公司對抗賽冠軍',html:'<a href="https://www.youtube.com/watch?v=nKpaExWiTi8#t=2h0m15s"target="_blank" class="btn_green btn_go r5"> video link </a>'},
 	{title:'AWS Taipei Summit DeepRacer 13名',html:'<a href="https://aws.amazon.com/tw/deepracer/schedule-and-standings/leaderboard-taipei-summit/"target="_blank" class="btn_green btn_go r5"> link </a>'}
 	],
